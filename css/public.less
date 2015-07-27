@@ -1,0 +1,50 @@
+// mcd项目class命名规范
+// 1 不使用 _ ；若需要命名前缀，使用 -；如 ui-checkbox
+// 2 不使用驼峰式
+// 3 后缀层次等级 bar = block > box > item
+// 4 尽量使用class控制样式，使用id进行js操作
+// 5 样式属性书写顺序 
+// 这几个尽量靠前 position\top,left\display\width,height\z-index
+// 这几个尽量靠后 color\background\font-size
+html,body{
+	height:100%;
+	overflow: hidden;
+}
+.topbar{
+	position: absolute;
+	top:0;left:0;
+	padding-left: 76px;
+	z-index:5;
+	.myfavorite,.username{
+		display: inline-block;
+		height:100%;
+		line-height: 64px;
+	}
+	.changetheme{
+		display: inline-block;
+		height:32px;
+		width:32px;
+		border-radius: 16px;
+		text-align: center;
+		line-height: 32px;
+		background-color: #189cbb;
+	}
+	.username{
+
+	}
+}
+.leftbar{
+	position:absolute;
+	left:0;top:0;
+	width:76px;
+	height:100%;
+	background-color: #281414;
+	z-index:6;
+	&>img{
+		position: absolute;
+		left:0;top:0;
+		display: block;
+		height:64px;
+		width:100%;
+	}
+}

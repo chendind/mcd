@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 76px;
+  z-index: 5;
+}
+.topbar .myfavorite,
+.topbar .username {
+  display: inline-block;
+  height: 100%;
+  line-height: 64px;
+}
+.topbar .changetheme {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 32px;
+  background-color: #189cbb;
+}
+.leftbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 76px;
+  height: 100%;
+  background-color: #281414;
+  z-index: 6;
+}
+.leftbar > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 64px;
+  width: 100%;
+}
