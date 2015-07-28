@@ -1,22 +1,43 @@
 html,
 body {
   height: 100%;
+  min-height: 600px;
   overflow: hidden;
 }
-.topbar {
+.menu {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+}
+body .topbar {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 76px;
+  height: 64px;
+  width: 100%;
+  padding-left: 239px;
   z-index: 5;
 }
-.topbar .myfavorite,
-.topbar .username {
+body .topbar .menutoggle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #d00;
+}
+body .topbar .myfavorite,
+body .topbar .username {
   display: inline-block;
   height: 100%;
   line-height: 64px;
 }
-.topbar .changetheme {
+body .topbar .changetheme {
+  position: absolute;
+  right: 130px;
+  top: 16px;
   display: inline-block;
   height: 32px;
   width: 32px;
@@ -25,20 +46,104 @@ body {
   line-height: 32px;
   background-color: #189cbb;
 }
-.leftbar {
+body .topbar .username {
+  position: absolute;
+  right: 50px;
+  top: 0;
+}
+body .leftbar {
   position: absolute;
   left: 0;
   top: 0;
-  width: 76px;
+  width: 214px;
   height: 100%;
   background-color: #281414;
   z-index: 6;
 }
-.leftbar > img {
+body .leftbar > img {
   position: absolute;
   left: 0;
   top: 0;
   display: block;
   height: 64px;
   width: 100%;
+}
+body .leftbar > .menu {
+  width: 100%;
+  padding-top: 64px;
+  overflow-y: scroll;
+  height: auto;
+  max-height: 100%;
+  color: #e8e8e8;
+}
+body .leftbar > .menu > li {
+  height: 44px;
+  margin: 8px 0;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+body .leftbar > .menu > li > a {
+  display: block;
+  height: 44px;
+  width: 100%;
+  line-height: 44px;
+  padding-left: 20px;
+}
+body .leftbar > .menu > li > .submenu {
+  height: auto;
+  width: 100%;
+  padding-left: 60px;
+}
+body .leftbar > .menu > li > .submenu > li {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+}
+body .leftbar > .menu > li.set > a {
+  background-color: #d02b1e;
+}
+body .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 239px;
+  padding-top: 64px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+}
+body.menuclose .topbar {
+  padding-left: 101px;
+}
+body.menuclose .leftbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 76px;
+}
+body.menuclose .leftbar > .menu {
+  width: 100%;
+  padding-top: 64px;
+  overflow-y: scroll;
+  height: auto;
+  max-height: 100%;
+  color: #e8e8e8;
+}
+body.menuclose .leftbar > .menu > li > a {
+  display: none;
+}
+body.menuclose .leftbar > .menu > li > .submenu {
+  height: auto;
+  width: 100%;
+  padding-left: 60px;
+}
+body.menuclose .leftbar > .menu > li > .submenu > li {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+}
+body.menuclose .leftbar > .menu > li.set > a {
+  background-color: #d02b1e;
 }
