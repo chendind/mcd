@@ -29,7 +29,9 @@ body{
 		height:64px;
 		width:100%;
 		padding-left: @menuw1 + 25px;
+		padding-right: 50px;
 		z-index:5;
+		line-height: 64px;
 		// transition: padding @speed ease;
 		// -webkit-transition: padding @speed ease;
 		.menutoggle{
@@ -40,26 +42,47 @@ body{
 		}
 		.myfavorite,.username{
 			display: inline-block;
-			height:100%;
-			line-height: 64px;
-		}
-		.changetheme{
-			position: absolute;
-			right:130px;
-			top:16px;
-			display: inline-block;
 			height:32px;
-			width:32px;
-			border-radius: 16px;
-			text-align: center;
 			line-height: 32px;
-			background-color: #189cbb;
 		}
-		.username{
-			position:absolute;
-			right:50px;
-			top:0;
+		.topright{
+			float: right;
+			height:64px;
+			.changetheme{
+				// position: absolute;
+				// right:150px;
+				// top:16px;
+				display: inline-block;
+				height:32px;
+				width:32px;
+				border-radius: 16px;
+				text-align: center;
+				line-height: 32px;
+				background-color: #189cbb;
+			}
+			.username{
+				// position:absolute;
+				// right:50px;
+				// top:16px;
+				position: relative;
+				margin-left:10px;
+				margin-right:20px;
+				&.hasmessage{
+					&::before{
+						content: '';
+						position: absolute;
+						top:12px;
+						right:-14px;
+						display: block;
+						height:8px;
+						width:8px;
+						border-radius: 4px;
+						background-color: @red;
+					}
+				}
+			}
 		}
+		
 	}
 	.leftbar{
 		position:absolute;

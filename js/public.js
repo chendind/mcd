@@ -18,4 +18,8 @@ $(function(){
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');
 	})
+
+	$("#hasmessage").on('click',function(){
+		
+	})
 })

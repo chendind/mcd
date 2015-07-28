@@ -20,7 +20,9 @@ body .topbar {
   height: 64px;
   width: 100%;
   padding-left: 239px;
+  padding-right: 50px;
   z-index: 5;
+  line-height: 64px;
 }
 body .topbar .menutoggle {
   display: inline-block;
@@ -31,13 +33,14 @@ body .topbar .menutoggle {
 body .topbar .myfavorite,
 body .topbar .username {
   display: inline-block;
-  height: 100%;
-  line-height: 64px;
+  height: 32px;
+  line-height: 32px;
 }
-body .topbar .changetheme {
-  position: absolute;
-  right: 130px;
-  top: 16px;
+body .topbar .topright {
+  float: right;
+  height: 64px;
+}
+body .topbar .topright .changetheme {
   display: inline-block;
   height: 32px;
   width: 32px;
@@ -46,10 +49,21 @@ body .topbar .changetheme {
   line-height: 32px;
   background-color: #189cbb;
 }
-body .topbar .username {
+body .topbar .topright .username {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+body .topbar .topright .username.hasmessage::before {
+  content: '';
   position: absolute;
-  right: 50px;
-  top: 0;
+  top: 12px;
+  right: -14px;
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  background-color: #d02b1e;
 }
 body .leftbar {
   position: absolute;
