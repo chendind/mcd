@@ -114,34 +114,53 @@ body{
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
+	position: relative;
+	padding-top: 45px;
 }
 .taskContainer .title{
 	width: 100%;
 	background-color: #eb1e25;
-	padding: 15px;
+	padding-left: 15px;
+	height: 45px;
+	line-height: 45px;
 	color: #fff;
 	font-size: 14px;
 	font-weight: normal;
+	position: absolute;
+	top: 0;
+}
+.taskContainer>div{
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+}
+.taskContainer>div>div{
+	width: 33%;
+	height: 33%;
+	padding: 10px;
+	float: left;
 }
 .taskContainer .item{
-	float: left;
-	width: 75px;
-	height: 65px;
-	line-height: 65px;
-	margin-left: 30px;
-	margin-top: 25px;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 	color: #fff;
 	font-size: 20px;
 	border-radius: 5px;
 	background-color: #fdbd15;
 	position: relative;
+	cursor: pointer;
+	display: table;
+}
+.taskContainer .item>span{
+	display: table-cell;
+	vertical-align: middle;
 }
 .taskContainer #am{
 	background-color: #f6664b;
 }
 .taskContainer .newMsg:before{
-	content: "1";
+	content: attr(data-account);
 	display:block;
 	width: 20px;
 	height: 20px;
