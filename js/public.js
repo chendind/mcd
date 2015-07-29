@@ -18,8 +18,12 @@ $(function(){
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');
 	})
+	var linknum = $(".alertpanel .linkitem").length;
+	$.each($(".alertpanel .linkitem"),function(index){
+		if(index != 0 && index%5 == 0 && index != linknum){
+			// $(this).after("</div><div class=\"linkbox\">");
+			$(this).after("</div>");
 
-	$("#hasmessage").on('click',function(){
-		
+		}
 	})
 })

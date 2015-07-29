@@ -32,9 +32,47 @@ body .topbar .menutoggle {
 }
 body .topbar .myfavorite,
 body .topbar .username {
+  position: relative;
   display: inline-block;
   height: 32px;
   line-height: 32px;
+}
+body .topbar .myfavorite .alertpanel,
+body .topbar .username .alertpanel {
+  display: none;
+  position: absolute;
+  width: 510px;
+  height: 270px;
+  bottom: -270px;
+  left: 0;
+  background-color: #fff;
+  padding: 15px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+body .topbar .myfavorite .alertpanel .linkbox,
+body .topbar .username .alertpanel .linkbox {
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+body .topbar .myfavorite .alertpanel .linkbox .linkitem,
+body .topbar .username .alertpanel .linkbox .linkitem {
+  width: 100%;
+  line-height: 20px;
+  height: 40px;
+  padding: 10px 20px 10px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body .topbar .myfavorite .alertpanel .addbtn,
+body .topbar .username .alertpanel .addbtn {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  color: #ee4f3c;
 }
 body .topbar .topright {
   float: right;
@@ -161,6 +199,9 @@ body.menuclose .leftbar > .menu > li > .submenu > li {
 body.menuclose .leftbar > .menu > li.set > a {
   background-color: #d02b1e;
 }
+body.menuclose .content {
+  padding-left: 81px;
+}
 .one-third {
   width: 33.3%;
 }
@@ -173,42 +214,52 @@ body.menuclose .leftbar > .menu > li.set > a {
   padding-left: 20px;
 }
 .content .contitem .taskContainer {
-  position: relative;
   width: 100%;
   height: 100%;
   background-color: #fff;
+  position: relative;
+  padding-top: 45px;
+}
+.content .contitem .taskContainer > div {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+.content .contitem .taskContainer > div > div {
+  width: 33%;
+  height: 33%;
+  padding: 10px;
+  float: left;
 }
 .content .contitem .taskContainer .title {
   width: 100%;
-  height: 36px;
-  line-height: 36px;
-  padding-left: 15px;
-  color: #fff;
   background-color: #eb1e25;
+  padding-left: 15px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
   font-size: 14px;
   font-weight: normal;
-}
-.content .contitem .taskContainer .itembox {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  padding: 46px 10px 10px;
 }
-.content .contitem .taskContainer .itembox .item {
-  float: left;
-  width: 27.3%;
-  height: 65px;
-  line-height: 65px;
-  margin: 10px 3%;
+.content .contitem .taskContainer .item {
+  width: 100%;
+  height: 100%;
   text-align: center;
   color: #fff;
   font-size: 20px;
   border-radius: 5px;
   background-color: #fdbd15;
   position: relative;
+  cursor: pointer;
+  display: table;
 }
-.content .contitem .taskContainer .itembox .item.newMsg::before {
+.content .contitem .taskContainer .item > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.content .contitem .taskContainer .item.newMsg::before {
   content: attr(data-num);
   display: block;
   width: 20px;
@@ -224,7 +275,7 @@ body.menuclose .leftbar > .menu > li.set > a {
   top: -10px;
   background-color: #ed2621;
 }
-.content .contitem .taskContainer .itembox #am {
+.content .contitem .taskContainer #am {
   background-color: #f6664b;
 }
 .content .contitem .documentContainer {
