@@ -384,28 +384,40 @@ body.menuclose{
 			}
 		}
 		.documentContainer{
+			padding-top: 45px;
 			.title{
 				width: 100%;
 				background-color: #482625;
-				padding: 15px;
+				padding-left: 15px;
+				height: 45px;
+				line-height: 45px;
+				color: #fff;
+				font-size: 14px;
+				font-weight: normal;
+				position: absolute;
+				top: 0;
+			}
+			.listContainer{
+				width: 100%;
+				height: 100%;
+				padding: 10px 30px;
+				overflow: hidden;
 			}
 			ul{
-				/*padding: 20px 30px;*/
 				width: 100%;
-				margin: 20px auto;
+				height: 100%;
 				&>li{
 					position: relative;
-					display: block;
-					width:100%;
-					/*height: 60px;*/
-					margin-bottom: 20px;
+					width: 100%;
+					height: 25%;
+					min-height: 56px;
+					max-height: 80px;
 					&>a{
-						display: block;
-						width:100%;
-						height:100%;
+						display: table-cell;
+						vertical-align: middle;
+						position: relative;
 						img{
 							position: absolute;
-							top: 5px;
 						}
 						h6{
 							margin-left: 50px;

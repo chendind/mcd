@@ -366,31 +366,45 @@ body.menuclose .content {
 .content .contitem .taskContainer #am {
   background-color: #f6664b;
 }
+.content .contitem .documentContainer {
+  padding-top: 45px;
+}
 .content .contitem .documentContainer .title {
   width: 100%;
   background-color: #482625;
-  padding: 15px;
+  padding-left: 15px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+}
+.content .contitem .documentContainer .listContainer {
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px;
+  overflow: hidden;
 }
 .content .contitem .documentContainer ul {
-  /*padding: 20px 30px;*/
-  width: 100%;
-  margin: 20px auto;
-}
-.content .contitem .documentContainer ul > li {
-  position: relative;
-  display: block;
-  width: 100%;
-  /*height: 60px;*/
-  margin-bottom: 20px;
-}
-.content .contitem .documentContainer ul > li > a {
-  display: block;
   width: 100%;
   height: 100%;
 }
+.content .contitem .documentContainer ul > li {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  min-height: 56px;
+  max-height: 80px;
+}
+.content .contitem .documentContainer ul > li > a {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
 .content .contitem .documentContainer ul > li > a img {
   position: absolute;
-  top: 5px;
 }
 .content .contitem .documentContainer ul > li > a h6 {
   margin-left: 50px;
