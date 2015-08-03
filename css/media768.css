@@ -56,8 +56,30 @@
   }
   .content .contitem .taskContainer > div > div {
     width: 20%;
-    padding: 10px;
+    height: 50%;
+    padding: 10px 20px;
     float: left;
+  }
+  .content .contitem .taskContainer .item.newMsg::before {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+  .content .contitem#documentblock,
+  .content .contitem#scheduleblock,
+  .content .contitem#stockblock {
+    width: 50%;
+    height: 300px;
+  }
+  .content .contitem#documentblock {
+    padding-right: 10px;
+  }
+  .content .contitem#scheduleblock {
+    padding-left: 10px;
+  }
+  .content .contitem#stockblock {
+    padding-left: 20px;
   }
 }
 @media (max-width: 600px) {
@@ -73,11 +95,30 @@
   .content .contitem .taskContainer > div {
     width: 100%;
     height: 100%;
-    padding: 15px;
+    padding: 10px;
   }
   .content .contitem .taskContainer > div > div {
     width: 25%;
     padding: 10px;
     float: left;
+  }
+  .content .contitem .taskContainer > div .item {
+    font-size: 15px;
+  }
+  .content .contitem .taskContainer > div .item.newMsg::before {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .content .contitem#taskblock {
+    height: 200px;
+  }
+  .content .contitem#documentblock,
+  .content .contitem#scheduleblock,
+  .content .contitem#stockblock {
+    width: 100%;
+    height: 200px;
+    padding: 0 0 20px;
   }
 }
