@@ -53,12 +53,20 @@ body .topbar {
   position: absolute;
   top: 0;
   left: 0;
-  height: 64px;
+  height: 60px;
   width: 100%;
   padding-left: 239px;
   padding-right: 50px;
-  z-index: 5;
-  line-height: 64px;
+  z-index: 6;
+  line-height: 60px;
+}
+body .topbar > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 60px;
+  width: 72px;
 }
 body .topbar .menutoggle {
   display: inline-block;
@@ -70,8 +78,8 @@ body .topbar .myfavorite,
 body .topbar .username {
   position: relative;
   display: inline-block;
-  height: 32px;
-  line-height: 32px;
+  height: 30px;
+  line-height: 30px;
   cursor: pointer;
 }
 body .topbar .myfavorite.open .alertpanel,
@@ -108,7 +116,7 @@ body .topbar .username .alertpanel {
   width: 140px;
   height: 84px;
   right: -20px;
-  top: 32px;
+  top: 30px;
 }
 body .topbar .username .alertpanel > div {
   height: 50%;
@@ -124,15 +132,15 @@ body .topbar .username .alertpanel > div:hover {
 }
 body .topbar .topright {
   float: right;
-  height: 64px;
+  height: 60px;
 }
 body .topbar .topright .changetheme {
   display: inline-block;
-  height: 32px;
-  width: 32px;
+  height: 30px;
+  width: 30px;
   border-radius: 16px;
   text-align: center;
-  line-height: 32px;
+  line-height: 30px;
   background-color: #189cbb;
 }
 body .topbar .topright .username {
@@ -166,20 +174,12 @@ body .leftbar {
   top: 0;
   width: 214px;
   height: 100%;
+  padding-top: 60px;
   background-color: #281414;
-  z-index: 6;
-}
-body .leftbar > img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  height: 64px;
-  width: 100%;
+  z-index: 5;
 }
 body .leftbar > .menu {
   width: 100%;
-  padding-top: 64px;
   height: auto;
   max-height: 100%;
   color: #e8e8e8;
@@ -217,21 +217,21 @@ body .content {
   height: 100%;
   position: relative;
   padding-left: 219px;
-  padding-top: 64px;
+  padding-top: 60px;
   padding-right: 50px;
   padding-bottom: 25px;
 }
 body.menuclose .topbar {
-  padding-left: 101px;
+  padding-left: 97px;
 }
 body.menuclose .leftbar {
-  width: 76px;
+  width: 72px;
 }
-body.menuclose .leftbar > .menu > li > a {
+body.menuclose .leftbar > .menu > li * {
   display: none;
 }
 body.menuclose .content {
-  padding-left: 81px;
+  padding-left: 77px;
 }
 .one-third {
   width: 33.3%;

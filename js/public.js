@@ -1,11 +1,4 @@
 $(function(){
-	// 公关的页面alertpanel关闭
-	$(document).on('click',function(){
-		$("[data-role='switch']").removeClass('open');
-	})
-
-
-
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
 	$(".menu>li>a").on('click',function(){
 		var li = $(this).parent('li');
@@ -23,6 +16,20 @@ $(function(){
 
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');
+	})
+
+	// 公关的页面alertpanel关闭
+	$(document).on('click',function(){
+		$("[data-role='switch']").removeClass('open');
+	})
+	if(!body.hasClass('menuclose')&&$(this).width() < 1025){
+			body.addClass('menuclose');
+		}
+	// window resize时候给body增加或删去一些class
+	$(window).on('resize',function(){
+		if(!body.hasClass('menuclose')&&$(this).width() < 1025){
+			body.addClass('menuclose');
+		}
 	})
 	var linknum = $("#myfavorite .alertpanel .linkitem").length-0, boxnum = Math.ceil((linknum+1)/6),
 	    box = $("<div class=\"linkbox\"></div>"), 

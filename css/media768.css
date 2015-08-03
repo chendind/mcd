@@ -1,14 +1,22 @@
-@media (max-width: 1024px) and (min-width: 768px) {
-  body.menuclose .topbar {
-    padding-left: 101px;
+@media (max-width: 900px) and (min-width: 600px) {
+  body .topbar {
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    padding-left: 72px !important;
+    background-color: #d02b1e;
+  }
+  body .topbar > img {
+    width: 72px;
+    height: 100%;
+  }
+  body .leftbar {
+    width: 100% !important;
+  }
+  body .leftbar > .menu {
+    height: 100%;
   }
   body.menuclose .leftbar {
-    width: 76px;
-  }
-  body.menuclose .leftbar > .menu > li > a {
-    display: none;
-  }
-  body.menuclose .content {
-    padding-left: 81px;
+    height: 0;
   }
 }

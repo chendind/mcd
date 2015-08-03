@@ -8,7 +8,7 @@
 // 这几个尽量靠后 color\background\font-size
 
 @menuw1 : 214px;
-@menuw2 : 76px;
+@menuw2 : 72px;
 @speed : 300ms;
 @red : #d02b1e;
 html,body{
@@ -59,14 +59,21 @@ body{
 	.topbar{
 		position: absolute;
 		top:0;left:0;
-		height:64px;
+		height:60px;
 		width:100%;
 		padding-left: @menuw1 + 25px;
 		padding-right: 50px;
-		z-index:5;
-		line-height: 64px;
+		z-index:6;
+		line-height: 60px;
 		// transition: padding @speed ease;
 		// -webkit-transition: padding @speed ease;
+		&>img{
+			position: absolute;
+			left:0;top:0;
+			display: block;
+			height:60px;
+			width: 72px;
+		}
 		.menutoggle{
 			display: inline-block;
 			width: 18px;
@@ -76,8 +83,8 @@ body{
 		.myfavorite,.username{
 			position: relative;
 			display: inline-block;
-			height:32px;
-			line-height: 32px;
+			height:30px;
+			line-height: 30px;
 			cursor:pointer;
 			&.open{
 				.alertpanel{
@@ -118,7 +125,7 @@ body{
 				width: 140px;
 				height:84px;
 				right:-20px;
-				top: 32px;
+				top: 30px;
 				&>div{
 					height:50%;
 					width:100%;
@@ -135,14 +142,14 @@ body{
 		}
 		.topright{
 			float: right;
-			height:64px;
+			height:60px;
 			.changetheme{
 				display: inline-block;
-				height:32px;
-				width:32px;
+				height:30px;
+				width:30px;
 				border-radius: 16px;
 				text-align: center;
-				line-height: 32px;
+				line-height: 30px;
 				background-color: #189cbb;
 			}
 			.username{
@@ -179,18 +186,11 @@ body{
 		left:0;top:0;
 		width:@menuw1;
 		height:100%;
+		padding-top: 60px;
 		background-color: #281414;
-		z-index:6;
-		&>img{
-			position: absolute;
-			left:0;top:0;
-			display: block;
-			height:64px;
-			width:100%;
-		}
+		z-index:5;
 		&>.menu{
 			width:100%;
-			padding-top: 64px;
 			// overflow-y: scroll;
 			height: auto;
 			max-height: 100%;
@@ -234,7 +234,7 @@ body{
 		height:100%;
 		position: relative;
 		padding-left: @menuw1+5px;
-		padding-top: 64px;
+		padding-top: 60px;
 		padding-right: 50px;
 		padding-bottom: 25px;
 	}
@@ -247,7 +247,7 @@ body.menuclose{
 		width:@menuw2;
 		&>.menu{
 			&>li{
-				&>a{
+				*{
 					display: none;
 				}
 			}
