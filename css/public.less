@@ -272,10 +272,10 @@ body.menuclose{
 		&#newsblock,&#taskblock{
 			padding-bottom: 10px;
 		}
-		&#documentblock,&#scheduleblock{
+		&#documentblock,&#scheduleblock,&#stockblock{
 			padding-top: 10px;
 		}
-		.newsContainer,.taskContainer,.documentContainer,.scheduleContainer{
+		.newsContainer,.taskContainer,.documentContainer,.scheduleContainer,.stockContainer{
 			position: relative;
 			width: 100%;
 			height: 100%;
@@ -590,6 +590,42 @@ body.menuclose{
 							}
 						}
 					}
+				}
+			}
+		}
+		.stockContainer{
+			padding-top: 45px;
+			.title{
+				position: absolute;
+				top: 0;
+				height: 45px;
+				line-height: 45px;
+				width: 100%;
+				padding: 0 15px;
+				span{
+					color: #cf2c1b;
+				}
+				a{
+					display: block;
+					position: absolute;
+					right: 10px;
+					top: -5px;
+					color: #cf2c1b;
+					font-size: 25px;
+	
+				}
+				img{
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+			}
+			.listContainer{
+				width: 100%;
+				height: 100%;
+				padding: 0 15px 15px;
+				img{
+					width: 100%;
+					height: 100%;
 				}
 			}
 		}
