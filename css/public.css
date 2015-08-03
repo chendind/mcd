@@ -47,7 +47,8 @@ body {
 body {
   background-image: url(../img/Dashboard_bg.jpg);
   background-size: cover;
-  background-origin: center;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 body .topbar {
   position: absolute;

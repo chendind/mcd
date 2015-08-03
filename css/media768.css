@@ -1,10 +1,16 @@
-@media (max-width: 900px) and (min-width: 600px) {
+@media (max-width: 900px) {
+  html {
+    height: auto;
+  }
+  body {
+    height: auto;
+  }
   body .topbar {
     width: 100%;
     height: 60px;
     padding: 0;
     padding-left: 72px !important;
-    background-color: #d02b1e;
+    background-color: #eb1e25;
   }
   body .topbar > img {
     width: 72px;
@@ -17,6 +23,61 @@
     height: 100%;
   }
   body.menuclose .leftbar {
-    height: 0;
+    display: none;
+  }
+  body .content,
+  body.menuclose .content {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 76px;
+    padding-right: 35px;
+    padding-bottom: 16px;
+  }
+  .content .contitem {
+    width: 100%;
+    padding-left: 0;
+  }
+  .content .contitem#newsblock {
+    height: 330px;
+  }
+  .content .contitem#taskblock {
+    height: 260px;
+  }
+  .content .contitem .taskContainer {
+    padding-top: 35px;
+  }
+  .content .contitem .taskContainer > div {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+  .content .contitem .taskContainer > div > div {
+    width: 20%;
+    padding: 10px;
+    float: left;
+  }
+}
+@media (max-width: 600px) {
+  .content .contitem .newsContainer > .cont .banner {
+    display: none;
+  }
+  .content .contitem .newsContainer > .cont .news {
+    width: 100%;
+  }
+  .content .contitem .taskContainer {
+    padding-top: 35px;
+  }
+  .content .contitem .taskContainer > div {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+  }
+  .content .contitem .taskContainer > div > div {
+    width: 25%;
+    padding: 10px;
+    float: left;
   }
 }

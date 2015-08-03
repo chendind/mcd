@@ -2,19 +2,24 @@
 @menuw2 : 72px;
 @speed : 300ms;
 @red : #d02b1e;
+@lightred:#eb1e25;
 // 1025以下，900以上 使用ipad横版布局
-@media(max-width:1025px) and (min-width:900px){
+@media(max-width:1025px){
 
 }
 // 900以下，600以上 使用ipad竖版布局
-@media(max-width:900px) and (min-width:600px){
+@media(max-width:900px){
+	html{
+		height: auto;
+	}
 	body{
+		height: auto;
 		.topbar{
 			width: 100%;
 			height:60px;
 			padding: 0;
 			padding-left: @menuw2 !important;
-			background-color: @red;
+			background-color: @lightred;
 			&>img{
 				width: @menuw2;
 				height: 100%;
@@ -29,11 +34,75 @@
 	}
     body.menuclose{
     	.leftbar{
-			height:0;
+			display: none;
     	}
     }
+    body,body.menuclose{
+    	.content{
+			width:100%;
+			height:auto;
+			overflow: hidden;
+			position: relative;
+			padding-left: 35px;
+			padding-top: 76px;
+			padding-right: 35px;
+			padding-bottom: 16px;
+		}
+	}
+	.content{
+		.contitem{
+			width: 100%;
+			padding-left:0;
+			&#newsblock{
+				height: 330px;
+			}
+			&#taskblock{
+				height: 260px;
+			}
+			.taskContainer{
+				padding-top: 35px;
+				&>div{
+					width: 100%;
+					height: 100%;
+					padding: 15px;
+					&>div{
+						width: 20%;
+						padding: 10px;
+						float: left;
+					}
+				}
+			}
+		}
+	}
 }
+
 // 600以下 使用手机布局
 @media(max-width:600px){
-
+	.content{
+		.contitem{
+			.newsContainer{
+				&>.cont{
+					.banner{
+						display: none;
+					}
+					.news{
+						width:100%;
+					}
+				}
+			}
+			.taskContainer{
+				padding-top: 35px;
+				&>div{
+					width: 100%;
+					height: 100%;
+					padding: 15px;
+					&>div{
+						width: 25%;
+						padding: 10px;
+						float: left;
+					}
+				}
+			}
+		}
+	}
 }
