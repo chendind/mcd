@@ -9,6 +9,17 @@ html,body{
 	margin-right: 30px;
 	margin-bottom: 30px;
 }
+.vertical-center{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%); 
+	-moz-transform:translate(-50%,-50%); 	
+	-webkit-transform:translate(-50%,-50%); 
+	-o-transform:translate(-50%,-50%); 
+}
 
 														/*DOCUMENT CENTER*/
 
@@ -176,21 +187,32 @@ html,body{
 .taskContainer .item{
 	width: 100%;
 	height: 100%;
-	text-align: center;
 	color: #fff;
 	font-size: 20px;
 	border-radius: 5px;
 	background-color: #fdbd15;
 	position: relative;
 	cursor: pointer;
-	display: table;
 }
 .taskContainer .item>span{
-	display: table-cell;
-	vertical-align: middle;
 }
-.taskContainer #am{
+#am{
 	background-color: #f6664b;
+}
+#pmt{
+	background-color: #64C7DB;
+}
+#mgis{
+	background-color: #46A7BC;
+}
+#it{
+	background-color: #EF9D18;
+}
+#ems{
+	background-color: #31BF9E;
+}
+#bit{
+	background-color: #607DF0;
 }
 .taskContainer .newMsg:before{
 	content: attr(data-account);

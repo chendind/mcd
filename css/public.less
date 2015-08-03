@@ -21,6 +21,37 @@ html,body{
 	-ms-user-select: none;      /* IE 10+ */
 	user-select: none;
 }
+.verticalCenter{
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%); 
+	-moz-transform:translateY(-50%); 	
+	-webkit-transform:translateY(-50%); 
+	-o-transform:translateY(-50%); 
+}
+.horizontalCenter{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	-ms-transform:translateX(-50%); 
+	-moz-transform:translateX(-50%); 	
+	-webkit-transform:translateX(-50%); 
+	-o-transform:translateX(-50%); 
+}
+.veryCenter{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%); 
+	-moz-transform:translate(-50%,-50%); 	
+	-webkit-transform:translate(-50%,-50%); 
+	-o-transform:translate(-50%,-50%); 
+}
 body{
 	background-image: url(../img/Dashboard_bg.jpg);
 	background-size: cover;
@@ -400,11 +431,6 @@ body.menuclose{
 				background-color: #fdbd15;
 				position: relative;
 				cursor: pointer;
-				display: table;
-				&>span{
-					display: table-cell;
-					vertical-align: middle;
-				}
 				&.newMsg::before{
 					content: attr(data-num);
 					display:block;
@@ -422,9 +448,24 @@ body.menuclose{
 					background-color: #ed2621;
 				}
 			}
-			#am{
+			#AM{
 				background-color: #f6664b;
 			}
+			#PMT{
+				background-color: #64C7DB;
+			}
+			#MGIS{
+				background-color: #46A7BC;
+			}
+			#IT{
+				background-color: #EF9D18;
+			}
+			#EMS{
+				background-color: #31BF9E;
+			}
+			#BIL{
+				background-color: #607DF0;
+			}	
 		}
 		.documentContainer{
 			padding-top: 45px;
@@ -443,12 +484,13 @@ body.menuclose{
 			.listContainer{
 				width: 100%;
 				height: 100%;
-				padding: 10px 30px;
+				padding: 10px 20px;
 				overflow: hidden;
 			}
 			ul{
 				width: 100%;
 				height: 100%;
+				overflow: hidden;
 				&>li{
 					position: relative;
 					width: 100%;
@@ -456,9 +498,7 @@ body.menuclose{
 					min-height: 56px;
 					max-height: 80px;
 					&>a{
-						display: table-cell;
-						vertical-align: middle;
-						position: relative;
+						width: 100%;
 						img{
 							position: absolute;
 						}
@@ -467,20 +507,25 @@ body.menuclose{
 							font-size: 13px;
 						}
 						p{
+							height: 30px;
+							line-height: 15px;
 							margin-left: 50px;
 							font-size: 12px;
+							overflow: hidden;
 						}
 					}
 				}
 			}
 		}
 		.scheduleContainer{
+			padding-top: 59px;
 			background-color: rgba(223,0,0,0.8);
 			.title{
-				padding: 20px;
-				padding-bottom: 0;
+				position: absolute;
+				top: 0;
 				width: 100%;
-				position: relative;
+				padding: 10px 15px;
+				padding-bottom: 0;
 				img{
 					position: absolute;
 					right: 20px;
@@ -497,34 +542,51 @@ body.menuclose{
 					font-size: 15px;
 				}
 			}
-			ul{
-				width: 90%;
-				margin: 0 auto;
-				li{
-					display: block;
+			.listContainer{
+				width: 100%;
+				height: 100%;
+				padding: 0 15px;
+				ul{
 					width: 100%;
-					border-bottom: 1px rgba(255,255,255,0.2) solid;
-					&:last-of-type{
-						border-bottom: none;
-					}
-					a{
+					height: 100%;
+					margin: 0 auto;
+					overflow: hidden;
+					li{
 						display: block;
+						position: relative;
 						width: 100%;
-						height: 50px;
-						line-height: 20px;
-						padding: 15px 0;
-						color: #fff;
-						font-size: 14px;
-						span{
-							background-color: #ffc72c;
+						height: 20%;
+						max-height: 70px;
+						min-height: 40px;
+						
+						border-bottom: 1px rgba(255,255,255,0.2) solid;
+						&:last-of-type{
+							border-bottom: none;
+						}
+						a{
 							display: block;
-							float: right;
-							width: 45px;
-							height: 20px;
+							position: relative;
+							width: 100%;
 							line-height: 20px;
-							text-align: center;
-							font-size: 12px;
-							border-radius: 10px;
+							padding-right: 50px;
+							color: #fff;
+							font-size: 14px;
+							text-overflow: ellipsis;
+  							white-space: nowrap;
+  							overflow: hidden;
+							span{
+								display: block;
+								position: absolute;
+								right: 1px;
+								top: 0;
+								width: 45px;
+								height: 20px;
+								line-height: 20px;
+								text-align: center;
+								background-color: #ffc72c;
+								font-size: 12px;
+								border-radius: 10px;
+							}
 						}
 					}
 				}
