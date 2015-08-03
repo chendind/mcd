@@ -22,6 +22,9 @@ html,body{
 	user-select: none;
 }
 body{
+	background-image: url(../img/Dashboard_bg.jpg);
+	background-size: cover;
+	background-origin: center;
 	.topbar{
 		position: absolute;
 		top:0;left:0;
@@ -260,6 +263,8 @@ body.menuclose{
 				height:35px;
 				background-color: #482625;
 				color:#fff;
+				position: relative;
+				z-index: 1;	
 				.title{
 					float: left;
 					height: 100%;
@@ -268,18 +273,23 @@ body.menuclose{
 					font-size: 14px;
 					line-height: 35px;
 					text-align: center;
+					cursor: pointer;
 				}
 				.title.set{
 					background-color: #eb1e25;
 				}
 			}
 			&>.cont{
+				display: none;
 				position: absolute;
 				left:0;
 				top: 0;
 				height: 100%;
 				width: 100%;
 				padding-top: 35px;
+				&.show{
+					display: block;
+				}
 				.banner{
 					float: left;	
 					width: 50%;
@@ -295,13 +305,12 @@ body.menuclose{
 					float: left;
 					width: 50%;
 					height: 100%;
-					padding: 5px 0;
+					padding: 5px 20px;
 					&>.cont{
 						position: relative;
-						width:70%;
+						width:100%;
 						height: 100%;
-						min-width: 230px;
-						margin:0 auto;
+						min-width: 200px;
 						padding-top: 40px;
 						h1{
 							position: absolute;
@@ -318,6 +327,44 @@ body.menuclose{
 							height:100%;
 							.item{
 								height: 33.3%;
+								width:100%;
+								border-bottom: 1px solid #ddd;
+								position: relative;
+								.date{
+									width: 23%;
+									height: 45px;
+									position: absolute;
+									transform: translateY(-50%);
+									top: 50%;
+									.day,.mon{
+										width:100%;
+										display: block;
+										color: #777;
+									}
+									.day{
+										font-size: 35px;
+										position: relative;
+										bottom: 5px;
+									}
+									.mon{
+										font-size: 15px;
+										position: relative;
+										bottom: 15px;
+										left:5px;
+									}
+								}
+								.text{
+									width: 77%;
+									position: absolute;
+									transform: translateY(-50%);
+									top: 50%;
+									// height:45px;
+									left:23%;
+									color: #999;
+								}
+								&:last-child{
+									border-bottom: none;
+								}
 							}
 						}
 					}

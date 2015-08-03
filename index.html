@@ -93,10 +93,10 @@
       <div class="contitem two-third" id="newsblock">
         <div class="newsContainer">
           <div class="btngroup">
-            <h5 class="title set">NEWS</h5>
-            <h5 class="title">DASHBOARD</h5>
+            <h5 class="title set" data-target="newsblock">NEWS</h5>
+            <h5 class="title" data-target="dashboard">DASHBOARD</h5>
           </div>
-          <div class="cont">
+          <div class="cont show" data-origin="newsblock">
             <div class="banner">
               <img src="./img/news01.jpg" alt="banner">
             </div>
@@ -104,13 +104,38 @@
               <div class="cont">
                 <h1>Top News</h1>
                 <div class="cont">
-                  <div class="item"></div>
-                  <div class="item"></div>
-                  <div class="item"></div>
+                  <div class="item">
+                    <div class="date">
+                      <span class="day">13</span>
+                      <span class="mon">MAR</span>
+                    </div>
+                    <div class="text">
+                      Lorem ispum. Proin ateti eros non eros adipiscing mollis.
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="date">
+                      <span class="day">09</span>
+                      <span class="mon">MAR</span>
+                    </div>
+                    <div class="text">
+                      Donec semper turpis sed diam. Integer eget sem. Ut vitae enim eu...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="date">
+                      <span class="day">08</span>
+                      <span class="mon">MAR</span>
+                    </div>
+                    <div class="text">
+                      Lorem ispum. Proin ateti eros non eros adipiscing mollis.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="cont" data-origin="dashboard"></div>
         </div>
       </div>
       <div class="contitem one-third" id="taskblock">

@@ -13,6 +13,11 @@ body {
   /* IE 10+ */
   user-select: none;
 }
+body {
+  background-image: url(../img/Dashboard_bg.jpg);
+  background-size: cover;
+  background-origin: center;
+}
 body .topbar {
   position: absolute;
   top: 0;
@@ -243,6 +248,8 @@ body.menuclose .content {
   height: 35px;
   background-color: #482625;
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 .content .contitem .newsContainer > .btngroup .title {
   float: left;
@@ -252,17 +259,22 @@ body.menuclose .content {
   font-size: 14px;
   line-height: 35px;
   text-align: center;
+  cursor: pointer;
 }
 .content .contitem .newsContainer > .btngroup .title.set {
   background-color: #eb1e25;
 }
 .content .contitem .newsContainer > .cont {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   padding-top: 35px;
+}
+.content .contitem .newsContainer > .cont.show {
+  display: block;
 }
 .content .contitem .newsContainer > .cont .banner {
   float: left;
@@ -279,14 +291,13 @@ body.menuclose .content {
   float: left;
   width: 50%;
   height: 100%;
-  padding: 5px 0;
+  padding: 5px 20px;
 }
 .content .contitem .newsContainer > .cont .news > .cont {
   position: relative;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  min-width: 230px;
-  margin: 0 auto;
+  min-width: 200px;
   padding-top: 40px;
 }
 .content .contitem .newsContainer > .cont .news > .cont h1 {
@@ -305,6 +316,44 @@ body.menuclose .content {
 }
 .content .contitem .newsContainer > .cont .news > .cont > .cont .item {
   height: 33.3%;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item .date {
+  width: 23%;
+  height: 45px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item .date .day,
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item .date .mon {
+  width: 100%;
+  display: block;
+  color: #777;
+}
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item .date .day {
+  font-size: 35px;
+  position: relative;
+  bottom: 5px;
+}
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item .date .mon {
+  font-size: 15px;
+  position: relative;
+  bottom: 15px;
+  left: 5px;
+}
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item .text {
+  width: 77%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 23%;
+  color: #999;
+}
+.content .contitem .newsContainer > .cont .news > .cont > .cont .item:last-child {
+  border-bottom: none;
 }
 .content .contitem .taskContainer {
   padding-top: 35px;

@@ -52,9 +52,15 @@ $(function(){
 	$(".alertpanel").on('click',function(e){
 		e.stopPropagation();
 	})
-	// $.each($(".alertpanel .linkitem"),function(index){
-	// 	if(index != 0 && index%5 == 0 && index != linknum){
-	// 		$(this).after("</div><div class=\"linkbox\">");
-	// 	}
-	// })
+	$(".btngroup").on('click','.title',function(){
+		if($(this).hasClass('set')){}
+		else{
+			var target = $(this).attr("data-target");
+			$(this).addClass('set').siblings(".title").removeClass('set');
+			$(this).parent(".btngroup").siblings(".cont[data-origin]").removeClass('show');
+			$(this).parent(".btngroup").siblings(".cont[data-origin='"+target+"']").addClass('show');
+		}
+
+
+	})
 })
