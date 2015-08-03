@@ -54,37 +54,52 @@ body{
 				}
 			}
 		}
-		.alertpanel{
-			display: none;
-			position:absolute;
-			width:auto;
-			height:270px;
-			bottom:-270px;
-			left:0;
-			background-color: #fff;
-			padding: 15px;
-			font-size: 12px;
-			border: 1px solid #ddd;
-			box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-			.linkbox{
-				width:159px;
-				height:100%;
-				float: left;
-				.linkitem{
-					width:100%;
-					line-height: 20px;
-					height:40px;
-					padding:10px 20px 10px 10px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
+		.myfavorite{
+			.alertpanel{
+				height:270px;
+				bottom:-270px;
+				padding: 15px;
+				left:0;
+				.linkbox{
+					width:159px;
+					height:100%;
+					float: left;
+					.linkitem{
+						width:100%;
+						line-height: 20px;
+						height:40px;
+						padding:10px 20px 10px 10px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+				}
+				.addbtn{
+					position:absolute;
+					right:20px;
+					bottom:15px;
+					color:#ee4f3c;
 				}
 			}
-			.addbtn{
-				position:absolute;
-				right:20px;
-				bottom:15px;
-				color:#ee4f3c;
+		}
+		.username{
+			.alertpanel{
+				width: 140px;
+				height:84px;
+				right:-20px;
+				top: 32px;
+				&>div{
+					height:50%;
+					width:100%;
+					line-height: 41px;
+					border-bottom:1px solid #ddd;
+					&:last-child{
+						border-bottom: none;
+					}
+					&:hover{
+						background-color: #f4f4f4;
+					}
+				}
 			}
 		}
 		.topright{
@@ -118,6 +133,15 @@ body{
 				}
 			}
 		}
+	}
+	.alertpanel{
+		display: none;
+		position:absolute;
+		width:auto;
+		background-color: #fff;
+		font-size: 12px;
+		border: 1px solid #ddd;
+		box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
 	}
 	.leftbar{
 		position:absolute;
@@ -189,38 +213,11 @@ body.menuclose{
 		padding-left: @menuw2+25px;
 	}
 	.leftbar{
-		position:absolute;
-		left:0;top:0;
 		width:@menuw2;
 		&>.menu{
-			width:100%;
-			padding-top: 64px;
-			overflow-y: scroll;
-			height: auto;
-			max-height: 100%;
-			color:#e8e8e8;
 			&>li{
-				
 				&>a{
 					display: none;
-				}
-				&>.submenu{
-					height:auto;
-					width:100%;
-					padding-left: 60px;
-					&>li{
-						width:100%;
-						height:35px;
-						line-height: 35px;
-						cursor:pointer;
-					}
-				}
-			}
-			&>li.set{
-				&>a{
-					background-color: @red;
-				}
-				&>.submenu{
 				}
 			}
 		}
@@ -350,7 +347,7 @@ body.menuclose{
 										font-size: 15px;
 										position: relative;
 										bottom: 15px;
-										left:5px;
+										left:4px;
 									}
 								}
 								.text{

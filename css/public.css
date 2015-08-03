@@ -47,25 +47,18 @@ body .topbar .myfavorite.open .alertpanel,
 body .topbar .username.open .alertpanel {
   display: block;
 }
-body .topbar .alertpanel {
-  display: none;
-  position: absolute;
-  width: auto;
+body .topbar .myfavorite .alertpanel {
   height: 270px;
   bottom: -270px;
-  left: 0;
-  background-color: #fff;
   padding: 15px;
-  font-size: 12px;
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+  left: 0;
 }
-body .topbar .alertpanel .linkbox {
+body .topbar .myfavorite .alertpanel .linkbox {
   width: 159px;
   height: 100%;
   float: left;
 }
-body .topbar .alertpanel .linkbox .linkitem {
+body .topbar .myfavorite .alertpanel .linkbox .linkitem {
   width: 100%;
   line-height: 20px;
   height: 40px;
@@ -74,11 +67,29 @@ body .topbar .alertpanel .linkbox .linkitem {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-body .topbar .alertpanel .addbtn {
+body .topbar .myfavorite .alertpanel .addbtn {
   position: absolute;
   right: 20px;
   bottom: 15px;
   color: #ee4f3c;
+}
+body .topbar .username .alertpanel {
+  width: 140px;
+  height: 84px;
+  right: -20px;
+  top: 32px;
+}
+body .topbar .username .alertpanel > div {
+  height: 50%;
+  width: 100%;
+  line-height: 41px;
+  border-bottom: 1px solid #ddd;
+}
+body .topbar .username .alertpanel > div:last-child {
+  border-bottom: none;
+}
+body .topbar .username .alertpanel > div:hover {
+  background-color: #f4f4f4;
 }
 body .topbar .topright {
   float: right;
@@ -108,6 +119,15 @@ body .topbar .topright .username.hasmessage::before {
   width: 8px;
   border-radius: 4px;
   background-color: #d02b1e;
+}
+body .alertpanel {
+  display: none;
+  position: absolute;
+  width: auto;
+  background-color: #fff;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 body .leftbar {
   position: absolute;
@@ -174,35 +194,10 @@ body.menuclose .topbar {
   padding-left: 101px;
 }
 body.menuclose .leftbar {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 76px;
-}
-body.menuclose .leftbar > .menu {
-  width: 100%;
-  padding-top: 64px;
-  overflow-y: scroll;
-  height: auto;
-  max-height: 100%;
-  color: #e8e8e8;
 }
 body.menuclose .leftbar > .menu > li > a {
   display: none;
-}
-body.menuclose .leftbar > .menu > li > .submenu {
-  height: auto;
-  width: 100%;
-  padding-left: 60px;
-}
-body.menuclose .leftbar > .menu > li > .submenu > li {
-  width: 100%;
-  height: 35px;
-  line-height: 35px;
-  cursor: pointer;
-}
-body.menuclose .leftbar > .menu > li.set > a {
-  background-color: #d02b1e;
 }
 body.menuclose .content {
   padding-left: 81px;
@@ -342,7 +337,7 @@ body.menuclose .content {
   font-size: 15px;
   position: relative;
   bottom: 15px;
-  left: 5px;
+  left: 4px;
 }
 .content .contitem .newsContainer > .cont .news > .cont > .cont .item .text {
   width: 77%;

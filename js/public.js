@@ -1,7 +1,7 @@
 $(function(){
 	// 公关的页面alertpanel关闭
 	$(document).on('click',function(){
-		$("#myfavorite").removeClass('open');
+		$("[data-role='switch']").removeClass('open');
 	})
 
 
@@ -24,13 +24,13 @@ $(function(){
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');
 	})
-	var linknum = $(".alertpanel .linkitem").length-0, boxnum = Math.ceil((linknum+1)/6),
+	var linknum = $("#myfavorite .alertpanel .linkitem").length-0, boxnum = Math.ceil((linknum+1)/6),
 	    box = $("<div class=\"linkbox\"></div>"), 
 	    tail = $('<a class="addbtn">Add New Link</a><div class="clear"></div>');
-	$(".alertpanel").width(boxnum*160+30);
+	$("#myfavorite .alertpanel").width(boxnum*160+30);
 	for(i=0;i<boxnum;i++){
-		var thisbox = box.clone().appendTo($(".alertpanel"));
-		$.each($(".alertpanel>.linkitem"),function(index){
+		var thisbox = box.clone().appendTo($("#myfavorite .alertpanel"));
+		$.each($("#myfavorite .alertpanel>.linkitem"),function(index){
 			if(index<6){
 				console.log($(this).text());
 	    		$(this).appendTo(thisbox);
@@ -38,17 +38,15 @@ $(function(){
 		})
 		if(i+1==boxnum){
 			if(thisbox.children('.linkitem').length>4){
-				box.clone().appendTo($(".alertpanel"));
+				box.clone().appendTo($("#myfavorite .alertpanel"));
 			}
-			tail.appendTo($('.alertpanel'));
+			tail.appendTo($('#myfavorite .alertpanel'));
 		}
 	}
-	$("#myfavorite").on('click',function(e){
+	$("[data-role='switch']").on('click',function(e){
 		e.stopPropagation();
 		$(this).toggleClass("open");
-
 	})
-
 	$(".alertpanel").on('click',function(e){
 		e.stopPropagation();
 	})

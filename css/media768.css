@@ -1,0 +1,14 @@
+@media (max-width: 1024px) and (min-width: 768px) {
+  body.menuclose .topbar {
+    padding-left: 101px;
+  }
+  body.menuclose .leftbar {
+    width: 76px;
+  }
+  body.menuclose .leftbar > .menu > li > a {
+    display: none;
+  }
+  body.menuclose .content {
+    padding-left: 81px;
+  }
+}
