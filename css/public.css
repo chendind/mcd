@@ -368,9 +368,6 @@ body.menuclose .content {
 .content .contitem .newsContainer > .cont .news > .cont > .cont .item .date {
   width: 23%;
   height: 45px;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
 }
 .content .contitem .newsContainer > .cont .news > .cont > .cont .item .date .day,
 .content .contitem .newsContainer > .cont .news > .cont > .cont .item .date .mon {
@@ -391,9 +388,6 @@ body.menuclose .content {
 }
 .content .contitem .newsContainer > .cont .news > .cont > .cont .item .text {
   width: 77%;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
   left: 23%;
   color: #999;
 }
