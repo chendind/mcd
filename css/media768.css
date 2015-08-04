@@ -36,6 +36,9 @@
     padding-right: 35px;
     padding-bottom: 16px;
   }
+  .slideBox {
+    width: 150% !important;
+  }
   .content .contitem {
     width: 100%;
     padding-left: 0;
@@ -69,7 +72,7 @@
   .content .contitem#documentblock,
   .content .contitem#scheduleblock,
   .content .contitem#stockblock {
-    width: 50%;
+    width: 33.3%;
     height: 300px;
   }
   .content .contitem#documentblock {
