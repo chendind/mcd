@@ -627,3 +627,152 @@ body.menuclose .content {
   width: 100%;
   height: 100%;
 }
+.content .contitem.nocont > * {
+  display: none;
+}
+.content .contitem.nocont > .noContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(253, 189, 21, 0.7);
+  cursor: pointer;
+}
+body.alertshow {
+  overflow: hidden;
+}
+body.alertshow .masklayer {
+  display: block;
+}
+.masklayer {
+  position: fixed;
+  display: none;
+  z-index: 11;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.masklayer > .alertbox {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.masklayer > .alertbox > .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  height: 48px;
+  line-height: 48px;
+}
+.masklayer > .alertbox > .title h6,
+.masklayer > .alertbox > .title span {
+  display: inline-block;
+  height: 100%;
+  font-weight: normal;
+}
+.masklayer > .alertbox > .title span {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.masklayer > .alertbox.cont {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+.masklayercont {
+  display: none;
+}
+#widgetcenter {
+  height: 305px;
+  padding-top: 48px;
+  max-width: 430px;
+}
+#widgetcenter > .cont > div {
+  width: 33.3%;
+  float: left;
+  height: 140px;
+  padding: 8px 20px 0;
+}
+#widgetcenter > .cont > div > .contblock {
+  width: 89px;
+  height: 83px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fbb113;
+}
+#widgetcenter > .cont > div > span {
+  display: block;
+  margin: 0 auto;
+  width: 89px;
+  padding: 0 5px;
+  font-size: 15px;
+}
+#addnewlink {
+  height: 210px;
+  max-width: 410px;
+  padding-top: 40px;
+}
+#addnewlink > .title {
+  height: 40px;
+  line-height: 40px;
+  background-color: #e94430;
+}
+#addnewlink > .title span {
+  position: absolute;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  line-height: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+#addnewlink > .cont {
+  padding: 15px;
+}
+#addnewlink > .cont > div {
+  width: 100%;
+  height: 40px;
+  padding: 5px 0px;
+  line-height: 30px;
+  padding-left: 70px;
+  position: relative;
+}
+#addnewlink > .cont > div > span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 70px;
+}
+#addnewlink > .cont > div > input {
+  display: block;
+  width: 98%;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+#addnewlink > .btngroup {
+  width: 210px;
+  margin: 0 auto;
+}
+#addnewlink > .btngroup .btn {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+}
+#addnewlink > .btngroup .btn:first-child {
+  margin-right: 10px;
+}

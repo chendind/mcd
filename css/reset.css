@@ -23,11 +23,11 @@ input,
 button {
   background-color: #fff;
   color: #555;
-  font-family: segoe, "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, sans-serif;
   font-size: 14px;
   position: relative;
   margin: 0 auto;
-  font-weight: 300;
+  font-weight: normal;
   -webkit-appearance: none ;
 }
 textarea {

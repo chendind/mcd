@@ -103,47 +103,59 @@
 
 // 600以下 使用手机布局
 @media(max-width:600px){
-	.content{
-		.contitem{
-			.newsContainer{
-				&>.cont{
-					.banner{
-						display: none;
-					}
-					.news{
-						width:100%;
+	body{
+		.content{
+			padding-left: 16px !important;
+			padding-right: 16px !important;
+			.contitem{
+				.newsContainer{
+					&>.cont{
+						.banner{
+							display: none;
+						}
+						.news{
+							width:100%;
+						}
 					}
 				}
-			}
-			.taskContainer{
-				padding-top: 35px;
-				&>div{
-					width: 100%;
-					height: 100%;
-					padding: 10px;
+				.taskContainer{
+					padding-top: 35px;
 					&>div{
-						width: 25%;
+						width: 100%;
+						height: 100%;
 						padding: 10px;
-						float: left;
+						&>div{
+							width: 25%;
+							padding: 10px;
+							float: left;
+						}
+					.item{
+						font-size: 15px;
+						&.newMsg::before{
+							width: 20px;
+							height: 20px;
+							line-height: 20px;
+							font-size: 12px;
+						}
 					}
-				.item{
-					font-size: 15px;
-					&.newMsg::before{
-						width: 20px;
-						height: 20px;
-						line-height: 20px;
-						font-size: 12px;
 					}
 				}
+				&#taskblock{
+					height: 200px;
+				}
+				&#documentblock,&#scheduleblock,&#stockblock{
+					width: 100%;
+					height: 200px;
+					padding: 0 0 20px;
 				}
 			}
-			&#taskblock{
-				height: 200px;
-			}
-			&#documentblock,&#scheduleblock,&#stockblock{
-				width: 100%;
-				height: 200px;
-				padding: 0 0 20px;
+		}
+	}
+	#widgetcenter{
+		&>.cont{
+			&>div{
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 		}
 	}

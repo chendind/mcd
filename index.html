@@ -15,8 +15,8 @@
     <div class="topbar">
       <img src="./img/MCD_logo_small.jpg" alt="logo">
       <div class="menutoggle" id="menutoggle"></div>
-      <div class="myfavorite" id="myfavorite" data-role="switch">
-        <span>My Favorite</span>
+      <div class="myfavorite" id="myfavorite">
+        <span data-role="switch">My Favorite</span>
         <div class="alertpanel">
             <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
             <div class="linkitem"><a href="#" target="_blank">Built in BS3+</a></div>
@@ -33,17 +33,15 @@
             <div class="linkitem"><a href="#" target="_blank">Anchor Icon</a></div>
             <div class="linkitem"><a href="#" target="_blank">Full Customizable</a></div>
             <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
-            <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
-            <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
-            <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
+            <a class="addbtn" data-alert="addnewlink">Add New Link</a><div class="clear"></div>
         </div>
       </div>
       <div class="topright">
         <div class="changetheme">
           <span>M</span>
         </div>
-        <div class="username hasmessage" id="username" data-role="switch">
-          <span>Paul Smith</span>
+        <div class="username hasmessage" id="username">
+          <span data-role="switch">Paul Smith</span>
           <div class="alertpanel">
               <div>Profile</div>
               <div>Log out</div>
@@ -161,88 +159,128 @@
       <div class="slideContainer">
         <div>
           <div class="slideBox">
-      <div class="contitem one-third" id="documentblock">
-        <div class="documentContainer">
-          <h5 class="title">DOCUMENT CENTER</h5>
-          <div class="listContainer">
-            <ul>
-              <li>
-                <a class="verticalCenter">
-                  <img src="img/help_center.jpg" alt=""/>
-                  <h6>Help Center</h6>
-                  <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
-                </a>
-              </li>
-              <li>
-                <a class="verticalCenter">
-                  <img src="img/knowledge.jpg" alt=""/>
-                  <h6>Help Center</h6>
-                  <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
-                </a>
-              </li>
-              <li>
-                <a class="verticalCenter">
-                  <img src="img/service.jpg" alt=""/>
-                  <h6>Help Center</h6>
-                  <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
-                </a>
-              </li>
-              <li>
-                <a class="verticalCenter">
-                  <img src="img/kpi.jpg" alt=""/>
-                  <h6>Help Center</h6>
-                  <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
-                </a>
-              </li>
-            </ul>
+            <div class="contitem one-third" id="documentblock">
+              <div class="documentContainer">
+                <h5 class="title">DOCUMENT CENTER</h5>
+                <div class="listContainer">
+                  <ul>
+                    <li>
+                      <a class="verticalCenter">
+                        <img src="img/help_center.jpg" alt=""/>
+                        <h6>Help Center</h6>
+                        <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">
+                        <img src="img/knowledge.jpg" alt=""/>
+                        <h6>Help Center</h6>
+                        <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">
+                        <img src="img/service.jpg" alt=""/>
+                        <h6>Help Center</h6>
+                        <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">
+                        <img src="img/kpi.jpg" alt=""/>
+                        <h6>Help Center</h6>
+                        <p>Lorem ispum. Proin at eros non ero adipiscing mollis. Donec semper turpis sed</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="contitem one-third" id="scheduleblock">
+              <div class="scheduleContainer">
+                <div class="title">
+                  <img src="img/flag.png" alt=""/>
+                  <strong>Wednesday</strong>
+                  <span>2015, Jun 31</span>
+                </div>
+                <div class="listContainer">
+                  <ul>
+                    <li>
+                      <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
+                    </li>
+                    <li>
+                      <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="contitem one-third" id="stockblock">
+              <div class="stockContainer">
+                <div class="title">
+                  <img src="img/stock.png" alt="" />
+                  <span>STOCK</span>
+                  <a href="#">×</a>
+                </div>
+                <div class="listContainer">
+                  <img src="img/stockimg.png" alt="" />
+                </div>
+              </div>
+              <div class="noContainer" id="chooseContainerBtn" data-alert="widgetcenter">
+                
+              </div>
+            </div>
+            <div class="clear"></div>
           </div>
         </div>
       </div>
-      <div class="contitem one-third" id="scheduleblock">
-        <div class="scheduleContainer">
-          <div class="title">
-            <img src="img/flag.png" alt=""/>
-            <strong>Wednesday</strong>
-            <span>2015, Jun 31</span>
-          </div>
-          <div class="listContainer">
-            <ul>
-              <li>
-                <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
-              </li>
-              <li>
-                <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
-              </li>
-              <li>
-                <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
-              </li>
-              <li>
-                <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
-              </li>
-              <li>
-                <a class="verticalCenter">MCD_Portal_Prototype_updating<span>10:00</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="contitem one-third" id="stockblock">
-        <div class="stockContainer">
+    </div>
+    <div class="clear"></div>
+    <div class="masklayercont">
+      <div class="alertbox veryCenter" id="widgetcenter">
         <div class="title">
-          <img src="img/stock.png" alt="" />
-          <span>STOCK</span>
-          <a href="#">×</a>
+          <h6>WIDGET CENTER</h6>
+          <span>×</span>
         </div>
-        <div class="listContainer">
-          <img src="img/stockimg.png" alt="" />
+        <div class="cont">
+          <div>
+            <div class="contblock"></div>
+            <span>Document Center</span>
+          </div>
+          <div>
+            <div class="contblock"></div>
+            <span style="text-align:center;">Schedule</span>
+          </div>
+          <div>
+            <div class="contblock"></div>
+            <span style="text-align:center;">Stock</span>
+          </div>
         </div>
       </div>
+      <div class="alertbox veryCenter" id="addnewlink">
+        <div class="title">
+          <h6>Add New Link</h6>
+          <span>×</span>
+        </div>
+        <div class="cont">
+          <div><span>Name</span><input type="text" /></div>
+          <div><span>Create in</span><input type="text" /></div>
+        </div>
+        <div class="btngroup">
+          <a class="btn" style="background-color:#fdbd15;">Add</a><a class="btn" style="background-color:#ccc;">Cancel</a>
+        </div>
       </div>
-      <div class="clear"></div>
-      </div>
-      </div>
-      </div>
-      <div class="clear"></div>
+    </div>
+    <div class="masklayer">
     </div>
     <script src="./js/public.js"></script>
 </body>

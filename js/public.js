@@ -32,8 +32,8 @@ $(function(){
 		}
 	})
 	var linknum = $("#myfavorite .alertpanel .linkitem").length-0, boxnum = Math.ceil((linknum+1)/6),
-	    box = $("<div class=\"linkbox\"></div>"), 
-	    tail = $('<a class="addbtn">Add New Link</a><div class="clear"></div>');
+	    box = $("<div class=\"linkbox\"></div>");
+	    // tail = $('<a class="addbtn">Add New Link</a><div class="clear"></div>');
 	$("#myfavorite .alertpanel").width(boxnum*160+30);
 	for(i=0;i<boxnum;i++){
 		var thisbox = box.clone().appendTo($("#myfavorite .alertpanel"));
@@ -47,14 +47,14 @@ $(function(){
 			if(thisbox.children('.linkitem').length>4){
 				box.clone().appendTo($("#myfavorite .alertpanel"));
 			}
-			tail.appendTo($('#myfavorite .alertpanel'));
+			// tail.appendTo($('#myfavorite .alertpanel'));
 		}
 	}
 	$("[data-role='switch']").on('click',function(e){
 		e.stopPropagation();
-		$(this).toggleClass("open");
+		$(this).parent().toggleClass("open");
 	})
-	$(".alertpanel").on('click',function(e){
+	$(document).on('click',".alertpanel",function(e){
 		e.stopPropagation();
 	})
 	$(".btngroup").on('click','.title',function(){
@@ -65,7 +65,32 @@ $(function(){
 			$(this).parent(".btngroup").siblings(".cont[data-origin]").removeClass('show');
 			$(this).parent(".btngroup").siblings(".cont[data-origin='"+target+"']").addClass('show');
 		}
-
-
 	})
+
+	// 自定义模块
+
+
+	//弹出窗口
+	function mcdalert(cont){
+		body.addClass('alertshow');
+		$(".masklayer").append(cont);
+	}
+	function mcdalerthide(){
+		$(".masklayer").empty()
+		body.removeClass('alertshow');
+	}
+	$(".masklayer").on('click',".alertbox>.title>span",function(){
+		mcdalerthide();
+	})
+	$(document).on('click',"[data-alert]",function(e){
+		e.preventDeafault;
+		var id = $(this).attr("data-alert");
+		mcdalert($("#"+id).clone());
+	})
+
+
+
+
+
+
 })
