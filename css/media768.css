@@ -125,10 +125,13 @@
   body .content .contitem#scheduleblock,
   body .content .contitem#stockblock {
     width: 100%;
-    height: 200px;
+    height: 300px;
     padding: 0 0 20px;
   }
-  #widgetcenter > .cont > div {
+  body .content .slideBox {
+    width: 100% !important;
+  }
+  body #widgetcenter > .cont > div {
     padding-left: 10px;
     padding-right: 10px;
   }
