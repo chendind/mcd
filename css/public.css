@@ -240,6 +240,7 @@ body.menuclose .leftbar > .menu > li > a {
 }
 body.menuclose .leftbar > .menu > li > a > i {
   font-size: 30px;
+  left: 21px;
 }
 body.menuclose .leftbar > .menu > li > a > span {
   display: none;
