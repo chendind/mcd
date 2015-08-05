@@ -39,7 +39,6 @@ $(function(){
 		var thisbox = box.clone().appendTo($("#myfavorite .alertpanel"));
 		$.each($("#myfavorite .alertpanel>.linkitem"),function(index){
 			if(index<6){
-				console.log($(this).text());
 	    		$(this).appendTo(thisbox);
 			}
 		})
