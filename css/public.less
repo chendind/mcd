@@ -77,16 +77,27 @@ body{
 		}
 		.menutoggle{
 			display: inline-block;
-			width: 18px;
-			height: 18px;
-			background-color: #d00;
+			height: 30px;
+			width: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			color: @red;
+			position: relative;
+			top:2px;
+			margin-right: 10px;
+			cursor: pointer;
 		}
 		.myfavorite,.username{
 			position: relative;
 			display: inline-block;
 			height:30px;
 			line-height: 30px;
-			cursor:pointer;
+			span{
+				position: relative;
+				display: inline-block;
+				height:30px;
+				cursor:pointer;
+			}
 			&.open{
 				.alertpanel{
 					display: block;
@@ -125,7 +136,7 @@ body{
 			.alertpanel{
 				width: 140px;
 				height:84px;
-				right:-20px;
+				right:0px;
 				top: 30px;
 				&>div{
 					height:50%;
@@ -156,20 +167,28 @@ body{
 			.username{
 				position: relative;
 				margin-left:10px;
-				margin-right:20px;
-				&.hasmessage{
-					&::before{
-						content: '';
+				&>span{
+					padding-right:40px;
+					&>i{
 						position: absolute;
-						top:12px;
-						right:-14px;
-						display: block;
-						height:8px;
-						width:8px;
-						border-radius: 4px;
-						background-color: @red;
+						top: 7px;
+						right: 0px;
+					}
+					&.hasmessage{
+						&::before{
+							content: '';
+							position: absolute;
+							top:10px;
+							right:25px;
+							display: block;
+							height:8px;
+							width:8px;
+							border-radius: 4px;
+							background-color: @red;
+						}
 					}
 				}
+				
 			}
 		}
 	}
@@ -196,6 +215,7 @@ body{
 			max-height: 100%;
 			color:#e8e8e8;
 			&>li{
+				position: relative;
 				height:44px;
 				margin:8px 0;
 				width:100%;
@@ -257,14 +277,30 @@ body.menuclose{
 		width:@menuw2;
 		&>.menu{
 			&>li{
+				height:60px;
 				&>a{
+					height:60px;
 					padding-left: 72px;
 					&>i{
 						font-size: 30px;
-						left:21px;
+						top: 15px;
 					}
 					&>span{
 						display: none;
+					}
+				}
+				&>.submenu{
+					position: absolute;
+					left: 72px;
+					top:0;
+					height:auto;
+					width:100%;
+					padding-left: 60px;
+					&>li{
+						width:100%;
+						height:35px;
+						line-height: 35px;
+						cursor:pointer;
 					}
 				}
 			}

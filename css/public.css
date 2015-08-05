@@ -71,9 +71,15 @@ body .topbar > img {
 }
 body .topbar .menutoggle {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: #d00;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #d02b1e;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 body .topbar .myfavorite,
 body .topbar .username {
@@ -81,6 +87,12 @@ body .topbar .username {
   display: inline-block;
   height: 30px;
   line-height: 30px;
+}
+body .topbar .myfavorite span,
+body .topbar .username span {
+  position: relative;
+  display: inline-block;
+  height: 30px;
   cursor: pointer;
 }
 body .topbar .myfavorite.open .alertpanel,
@@ -116,7 +128,7 @@ body .topbar .myfavorite .alertpanel .addbtn {
 body .topbar .username .alertpanel {
   width: 140px;
   height: 84px;
-  right: -20px;
+  right: 0px;
   top: 30px;
 }
 body .topbar .username .alertpanel > div {
@@ -147,13 +159,20 @@ body .topbar .topright .changetheme {
 body .topbar .topright .username {
   position: relative;
   margin-left: 10px;
-  margin-right: 20px;
 }
-body .topbar .topright .username.hasmessage::before {
+body .topbar .topright .username > span {
+  padding-right: 40px;
+}
+body .topbar .topright .username > span > i {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+}
+body .topbar .topright .username > span.hasmessage::before {
   content: '';
   position: absolute;
-  top: 12px;
-  right: -14px;
+  top: 10px;
+  right: 25px;
   display: block;
   height: 8px;
   width: 8px;
@@ -186,6 +205,7 @@ body .leftbar > .menu {
   color: #e8e8e8;
 }
 body .leftbar > .menu > li {
+  position: relative;
   height: 44px;
   margin: 8px 0;
   width: 100%;
@@ -235,15 +255,33 @@ body.menuclose .topbar {
 body.menuclose .leftbar {
   width: 72px;
 }
+body.menuclose .leftbar > .menu > li {
+  height: 60px;
+}
 body.menuclose .leftbar > .menu > li > a {
+  height: 60px;
   padding-left: 72px;
 }
 body.menuclose .leftbar > .menu > li > a > i {
   font-size: 30px;
-  left: 21px;
+  top: 15px;
 }
 body.menuclose .leftbar > .menu > li > a > span {
   display: none;
+}
+body.menuclose .leftbar > .menu > li > .submenu {
+  position: absolute;
+  left: 72px;
+  top: 0;
+  height: auto;
+  width: 100%;
+  padding-left: 60px;
+}
+body.menuclose .leftbar > .menu > li > .submenu > li {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
 }
 body.menuclose .content {
   padding-left: 77px;

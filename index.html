@@ -15,9 +15,12 @@
   <body>
     <div class="topbar">
       <img src="./img/MCD_logo_small.jpg" alt="logo">
-      <div class="menutoggle" id="menutoggle"></div>
+      <!-- <div class="menutoggle" id="menutoggle">
+        <i class="fa fa-th-list"></i>
+      </div> -->
+      <i class="fa fa-th-list menutoggle" id="menutoggle"></i>
       <div class="myfavorite" id="myfavorite">
-        <span data-role="switch">My Favorite</span>
+        <span data-role="switch">My Favorite <i class="fa fa-caret-down"></i></span>
         <div class="alertpanel">
             <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
             <div class="linkitem"><a href="#" target="_blank">Built in BS3+</a></div>
@@ -41,8 +44,8 @@
         <div class="changetheme">
           <span>M</span>
         </div>
-        <div class="username hasmessage" id="username">
-          <span data-role="switch">Paul Smith</span>
+        <div class="username" id="username">
+          <span class="hasmessage" data-role="switch">Paul Smith<i class="fa fa-caret-down"></i></span>
           <div class="alertpanel">
               <div>Profile</div>
               <div>Log out</div>
@@ -55,12 +58,12 @@
       <ul class="menu">
         <li>
           <a>
-            <i class="fa fa-camera-retro"></i>
+            <i class="fa fa-fw fa-dashboard"></i>
             <span>Operations</spam>
           </a>  
         </li>
         <li>
-          <a><i class="fa fa-money"></i>Finance</a>  
+          <a><i class="fa fa-fw fa-credit-card"></i>Finance</a>  
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -68,10 +71,10 @@
           </ul>
         </li>
         <li>
-          <a><i class="fa fa-camera-retro"></i>Development</a>  
+          <a><i class="fa fa-fw fa-globe"></i>Development</a>  
         </li>
         <li>
-          <a><i class="fa fa-camera-retro"></i>IT</a> 
+          <a><i class="fa fa-fw fa-laptop"></i>IT</a> 
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -79,13 +82,13 @@
           </ul> 
         </li>
         <li>
-          <a><i class="fa fa-camera-retro"></i>User management</a>  
+          <a><i class="fa fa-fw fa-user"></i>User management</a>  
         </li>
         <li>
-          <a><i class="fa fa-camera-retro"></i>Franchising</a>  
+          <a><i class="fa fa-fw fa-leaf"></i>Franchising</a>  
         </li>
         <li>
-          <a><i class="fa fa-camera-retro"></i>Report</a>  
+          <a><i class="fa fa-fw fa-line-chart"></i>Report</a>  
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -93,7 +96,7 @@
           </ul>
         </li>
         <li>
-          <a><i class="fa fa-camera-retro"></i>Help</a>  
+          <a><i class="fa fa-fw fa-question-circle"></i>Help</a>  
         </li>
       </ul>
     </div>

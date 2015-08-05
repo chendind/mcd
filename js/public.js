@@ -1,16 +1,23 @@
 $(function(){
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
-	$(".menu>li>a").on('click',function(){
+	$(".menu>li>a").on('click',function(e){
+		e.preventDefault();
 		var li = $(this).parent('li');
-		var l = li.find("ul.submenu>li").length-0;
-		if(l){
-			if(li.hasClass('open')&&li.hasClass('set')){
-				li.stop(true).animate({"height":liheight}, speed).removeClass('open');
-			}
-			else{
-				li.stop(true).animate({"height":subliheight*l+liheight},speed).addClass('open');
+		if(body.hasClass("menuclose")){
+
+		}
+		else{
+			var l = li.find("ul.submenu>li").length-0;
+			if(l){
+				if(li.hasClass('open')&&li.hasClass('set')){
+					li.stop(true).animate({"height":liheight}, speed).removeClass('open');
+				}
+				else{
+					li.stop(true).animate({"height":subliheight*l+liheight},speed).addClass('open');
+				}
 			}
 		}
+		
 		li.addClass('set').siblings('li').removeClass('set');
 	})
 
@@ -20,7 +27,7 @@ $(function(){
 
 	// 公关的页面alertpanel关闭
 	$(document).on('click',function(){
-		$("[data-role='switch']").removeClass('open');
+		$("[data-role='switch']").closest(".open").removeClass('open');
 	})
 	if(!body.hasClass('menuclose')&&$(this).width() < 1025){
 			body.addClass('menuclose');
@@ -82,7 +89,7 @@ $(function(){
 		mcdalerthide();
 	})
 	$(document).on('click',"[data-alert]",function(e){
-		e.preventDeafault;
+		e.preventDefault();
 		var id = $(this).attr("data-alert");
 		mcdalert($("#"+id).clone());
 	})
