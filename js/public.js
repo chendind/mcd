@@ -87,10 +87,26 @@ $(function(){
 		var id = $(this).attr("data-alert");
 		mcdalert($("#"+id).clone());
 	})
-
-
-
-
-
+  
+  	$(".slideBox")[0].addEventListener("touchend", touchEnd, false);
 
 })
+
+function touchEnd(){
+	if($(window).width()<600 || $(window).width()>900 )
+		return;
+	var slideWidth=$(".slideBox").width();
+	if($(".slideContainer>div").scrollLeft()<slideWidth/6)
+		$(".slideContainer>div").animate({scrollLeft: 0}, 300);
+	else
+		$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
+}
+
+
+
+
+
+
+
+
+
