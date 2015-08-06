@@ -74,7 +74,13 @@ $(function(){
 	}
 	$("[data-role='switch']").on('click',function(e){
 		e.stopPropagation();
-		$(this).parent().toggleClass("open");
+		if($(this).parent().hasClass('open')){
+			$("[data-role='switch']").parent().removeClass('open');
+		}
+		else{
+			$("[data-role='switch']").parent().removeClass('open');
+			$(this).parent().addClass("open");
+		}
 	})
 	$(document).on('click',".alertpanel",function(e){
 		e.stopPropagation();
