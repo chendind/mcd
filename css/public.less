@@ -66,14 +66,28 @@ body{
 		padding-right: 50px;
 		z-index:6;
 		line-height: 60px;
-		// transition: padding @speed ease;
-		// -webkit-transition: padding @speed ease;
-		&>img{
-			position: absolute;
+		&>.logobox{
+			position:absolute;
 			left:0;top:0;
-			display: block;
-			height: 60px;
-			width: 72px;
+			height:60px;
+			width:214px;
+			overflow: hidden;
+			background-color: @red;
+			&>.logo1{
+				position: absolute;
+				left:0;top:0;
+				display: block;
+				height: 60px;
+				width: 72px;
+				padding: 14px 18px;
+			}
+			&>.logo2{
+				position: absolute;
+				left:65px;top:22px;
+				display: block;
+				height: 16px;
+				width: 130px;
+			}
 		}
 		.menutoggle{
 			display: inline-block;
@@ -134,20 +148,26 @@ body{
 		}
 		.username{
 			.alertpanel{
-				width: 140px;
+				width: 130px;
 				height:84px;
 				right:0px;
 				top: 30px;
 				&>div{
 					height:50%;
 					width:100%;
+					padding: 0 5px;
 					line-height: 41px;
 					border-bottom:1px solid #ddd;
+					cursor: pointer;
 					&:last-child{
 						border-bottom: none;
 					}
 					&:hover{
 						background-color: #f4f4f4;
+					}
+					&>i{
+						color: #333;
+						margin: 0 10px;
 					}
 				}
 			}
@@ -157,12 +177,14 @@ body{
 			height:60px;
 			.changetheme{
 				display: inline-block;
-				height:30px;
-				width:30px;
-				border-radius: 16px;
+				height:28px;
+				width:28px;
+				border-radius: 14px;
 				text-align: center;
-				line-height: 30px;
-				background-color: #189cbb;
+				line-height: 28px;
+				font-size: 16px;
+				color: #fff;
+				background-color: lighten(#189cbb,7%);
 			}
 			.username{
 				position: relative;
@@ -207,7 +229,8 @@ body{
 		width:@menuw1;
 		height:100%;
 		padding-top: 60px;
-		background-color: #281414;
+		overflow-y: scroll;
+		background-color: lighten(#281414,2%);
 		z-index:5;
 		&>.menu{
 			width:100%;
@@ -219,7 +242,7 @@ body{
 				height:44px;
 				margin:8px 0;
 				width:100%;
-				overflow: hidden;
+				overflow: hidden !important;
 				cursor:pointer;
 				&>a{
 					position: relative;
@@ -239,6 +262,7 @@ body{
 					}
 				}
 				&>.submenu{
+					display: none;
 					height:auto;
 					width:100%;
 					padding-left: 60px;
@@ -250,11 +274,17 @@ body{
 					}
 				}
 			}
+			&>li.open{
+				&>.submenu{
+					display: block;
+				}
+			}
 			&>li.set{
 				&>a{
 					background-color: @red;
 				}
 				&>.submenu{
+					display: block;
 				}
 			}
 		}
@@ -272,35 +302,62 @@ body{
 body.menuclose{
 	.topbar{
 		padding-left: @menuw2+25px;
+		&>.logobox{
+			position:absolute;
+			left:0;top:0;
+			height:60px;
+			width:72px;
+			&>.logo2{
+				display: none;
+			}
+		}
 	}
 	.leftbar{
 		width:@menuw2;
+		overflow-y: visible;
 		&>.menu{
 			&>li{
-				height:60px;
+				height: 44px !important;
+				overflow: visible !important;
+				margin: 16px 0;
 				&>a{
-					height:60px;
 					padding-left: 72px;
 					&>i{
+						top: 5px;
 						font-size: 30px;
-						top: 15px;
 					}
 					&>span{
 						display: none;
 					}
 				}
 				&>.submenu{
-					position: absolute;
-					left: 72px;
-					top:0;
-					height:auto;
-					width:100%;
-					padding-left: 60px;
-					&>li{
-						width:100%;
-						height:35px;
-						line-height: 35px;
-						cursor:pointer;
+					display: none;
+				}
+			}
+		}
+		&>.menu{
+			&>li.set{
+				&:hover{
+					&>a{
+						&>span{
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 72px;
+							width: 150px;
+							height: 44px;
+							padding-left: 24px;
+							background-color: @red;
+						}
+					}
+					&>.submenu{
+						display: block;
+						position: absolute;
+						top: 44px;
+						left: 72px;
+						width: 150px;
+						padding-left: 40px;
+						background-color: @red;
 					}
 				}
 			}
@@ -488,7 +545,7 @@ body.menuclose{
 				height: 100%;
 				text-align: center;
 				color: #fff;
-				font-size: 20px;
+				font-size: 18px;
 				border-radius: 5px;
 				background-color: #fdbd15;
 				position: relative;

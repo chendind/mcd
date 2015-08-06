@@ -14,11 +14,11 @@
   </head>
   <body>
     <div class="topbar">
-      <img src="./img/MCD_logo_small.jpg" alt="logo">
-      <!-- <div class="menutoggle" id="menutoggle">
-        <i class="fa fa-th-list"></i>
-      </div> -->
-      <i class="fa fa-th-list menutoggle" id="menutoggle"></i>
+      <div class="logobox">
+        <img src="./img/mcdlogo1.png" class="logo1" alt="logo">
+        <img src="./img/mcdlogo2.png" class="logo2" alt="logo">
+      </div>
+      <i class="fa fa-reorder menutoggle" id="menutoggle"></i>
       <div class="myfavorite" id="myfavorite">
         <span data-role="switch">My Favorite <i class="fa fa-caret-down"></i></span>
         <div class="alertpanel">
@@ -42,19 +42,18 @@
       </div>
       <div class="topright">
         <div class="changetheme">
-          <span>M</span>
+          <i class="fa fa-sliders fa-rotate-90"></i>
         </div>
         <div class="username" id="username">
           <span class="hasmessage" data-role="switch">Paul Smith<i class="fa fa-caret-down"></i></span>
           <div class="alertpanel">
-              <div>Profile</div>
-              <div>Log out</div>
+              <div><i class="fa fa-fw fa-user"></i>Profile</div>
+              <div><i class="fa fa-fw fa-sign-out"></i>Log out</div>
           </div>
         </div>
       </div>
     </div>
     <div class="leftbar">
-      
       <ul class="menu">
         <li>
           <a>
@@ -63,7 +62,7 @@
           </a>  
         </li>
         <li>
-          <a><i class="fa fa-fw fa-credit-card"></i>Finance</a>  
+          <a><i class="fa fa-fw fa-credit-card"></i><span>Finance</span></a>  
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -71,10 +70,10 @@
           </ul>
         </li>
         <li>
-          <a><i class="fa fa-fw fa-globe"></i>Development</a>  
+          <a><i class="fa fa-fw fa-globe"></i><span>Development</span></a>  
         </li>
         <li>
-          <a><i class="fa fa-fw fa-laptop"></i>IT</a> 
+          <a><i class="fa fa-fw fa-laptop"></i><span>IT</span></a> 
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -82,13 +81,13 @@
           </ul> 
         </li>
         <li>
-          <a><i class="fa fa-fw fa-user"></i>User management</a>  
+          <a><i class="fa fa-fw fa-user"></i><span>User management</span></a>  
         </li>
         <li>
-          <a><i class="fa fa-fw fa-leaf"></i>Franchising</a>  
+          <a><i class="fa fa-fw fa-leaf"></i><span>Franchising</span></a>  
         </li>
         <li>
-          <a><i class="fa fa-fw fa-line-chart"></i>Report</a>  
+          <a><i class="fa fa-fw fa-line-chart"></i><span>Report</span></a>  
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -96,7 +95,7 @@
           </ul>
         </li>
         <li>
-          <a><i class="fa fa-fw fa-question-circle"></i>Help</a>  
+          <a><i class="fa fa-fw fa-question-circle"></i><span>Help</span></a>  
         </li>
       </ul>
     </div>
@@ -236,7 +235,7 @@
                 <div class="title">
                   <img src="img/stock.png" alt="" />
                   <span>STOCK</span>
-                  <a href="#">×</a>
+                  <a>×</a>
                 </div>
                 <div class="listContainer">
                   <img src="img/stockimg.png" alt="" />

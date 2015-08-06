@@ -1,25 +1,41 @@
+// 在ipad上与电脑上分别触发touchend与click事件
+(function(){
+        var isTouch = ('ontouchend' in document.documentElement) ? 'touchend' : 'click',
+        	 _on = $.fn.on,
+        	 _one = $.fn.one,
+        	 _bind = $.fn.bind;
+            $.fn.on = function(){
+                arguments[0] = (arguments[0] === 'click') ? isTouch: arguments[0];
+                return _on.apply(this, arguments); 
+            };
+            $.fn.bind = function(){
+                arguments[0] = (arguments[0] === 'click') ? isTouch: arguments[0];
+                return _bind.apply(this, arguments); 
+            };
+    })();
 $(function(){
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
 	$(".menu>li>a").on('click',function(e){
 		e.preventDefault();
 		var li = $(this).parent('li');
-		if(body.hasClass("menuclose")){
+		// if(body.hasClass("menuclose")){
 
-		}
-		else{
+		// }
+		// else{
 			var l = li.find("ul.submenu>li").length-0;
 			if(l){
 				if(li.hasClass('open')&&li.hasClass('set')){
 					li.stop(true).animate({"height":liheight}, speed).removeClass('open');
 				}
 				else{
-					li.stop(true).animate({"height":subliheight*l+liheight},speed).addClass('open');
+					li.stop(true).animate({"height":subliheight*l+liheight}, speed).addClass('open');
 				}
 			}
-		}
+		// }
 		
 		li.addClass('set').siblings('li').removeClass('set');
 	})
+	// menuclose状态下鼠标移动改变左菜单状态
 
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');

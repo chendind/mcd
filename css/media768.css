@@ -1,3 +1,8 @@
+@media (max-width: 1025px) {
+  body .topbar .menutoggle {
+    display: none;
+  }
+}
 @media (max-width: 900px) {
   html {
     height: auto;
