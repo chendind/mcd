@@ -114,6 +114,9 @@ body{
 			}
 		}
 		.myfavorite{
+			.fa-heart-o{
+				display: none;
+			}
 			.alertpanel{
 				height:270px;
 				bottom:-270px;
@@ -142,6 +145,9 @@ body{
 			}
 		}
 		.username{
+			&>i{
+				display: none;
+			}
 			.alertpanel{
 				width: 130px;
 				height:84px;
@@ -232,24 +238,33 @@ body{
 				position: relative;
 				margin-left:10px;
 				&>span{
-					padding-right:40px;
-					&>i{
-						position: absolute;
-						top: 7px;
-						right: 0px;
+					
+					.big{
+						padding-right:40px;
+						&>i{
+							position: absolute;
+							top: 7px;
+							right: 0px;
+						}
+					}
+					.small{
+						display: none;
 					}
 					&.hasmessage{
-						&::before{
-							content: '';
-							position: absolute;
-							top:10px;
-							right:25px;
-							display: block;
-							height:8px;
-							width:8px;
-							border-radius: 4px;
-							background-color: @red;
+						.big{
+							&::before{
+								content: '';
+								position: absolute;
+								top:10px;
+								right:25px;
+								display: block;
+								height:8px;
+								width:8px;
+								border-radius: 4px;
+								background-color: @red;
+							}
 						}
+						
 					}
 				}
 				
@@ -283,6 +298,8 @@ body{
 			width:100%;
 			height: auto;
 			max-height: 100%;
+			padding-top: 8px;
+			margin-top: -8px;
 			color:#e8e8e8;
 			&>li{
 				position: relative;
@@ -298,6 +315,9 @@ body{
 					width:100%;
 					line-height: 44px;
 					padding-left: 60px;
+					&:hover{
+						background-color: rgba(255,255,255,0.1);
+					}
 					&>i{
 						position: absolute;
 						left: 18px;
@@ -323,12 +343,15 @@ body{
 					display: none;
 					height:auto;
 					width:100%;
-					padding-left: 60px;
 					&>li{
 						width:100%;
+						padding-left: 60px;
 						height:35px;
 						line-height: 35px;
 						cursor:pointer;
+						&:hover{
+							background-color: rgba(255,255,255,0.1);
+						}
 					}
 				}
 			}
@@ -427,8 +450,10 @@ body.menuclose{
 						top: 44px;
 						left: 72px;
 						width: 150px;
-						padding-left: 40px;
 						background-color: @red;
+						&>li{
+							padding-left: 40px;
+						}
 					}
 				}
 			}
@@ -459,6 +484,12 @@ body.menuclose{
 			}
 		}
 .content{
+	.slideContainer{
+		.contitem{
+			padding-top: 10px;
+			height: 100%;
+		}
+	}
 	.contitem{
 		height:50%;
 		float: left;
@@ -467,8 +498,7 @@ body.menuclose{
 			padding-bottom: 10px;
 		}
 		&#documentblock,&#scheduleblock,&#stockblock{
-			padding-top: 10px;
-			height: 100%;
+			
 		}
 		.newsContainer,.taskContainer,.documentContainer,.scheduleContainer,.stockContainer{
 			position: relative;
@@ -796,12 +826,15 @@ body.menuclose{
 				}
 				a{
 					display: block;
+					width: 35px;
+					height: 35px;
 					position: absolute;
-					right: 10px;
-					top: -5px;
+					right: 5px;
+					top: 5px;
 					color: #cf2c1b;
 					font-size: 25px;
-	
+					text-align: center;
+					line-height: 30px;
 				}
 				img{
 					vertical-align: middle;
@@ -818,17 +851,27 @@ body.menuclose{
 				}
 			}
 		}
-	}
-	.contitem.nocont{
-		&>*{
-			display: none;
-		}
+		
 		&>.noContainer{
-			display: block;
+			display: none;
+			position: relative;
 			width: 100%;
 			height: 100%;
 			background-color: rgba(253, 189, 21, 0.7);
 			cursor: pointer;
+			&>i{
+				font-size: 56px;
+				color: #fff;
+			}
+		}
+		
+	}
+	.contitem.nocont{
+		&>div{
+			display: none;
+		}
+		&>.noContainer{
+			display: block;
 		}
 	}
 }
@@ -867,13 +910,14 @@ body.alertshow{
 			}
 			span{
 				position:absolute;
-				right: 15px;
-				top:16px;
-				width: 16px;
-				height: 16px;
-				line-height: 16px;
+				right: 5px;
+				top:5px;
+				width: 35px;
+				height: 35px;
+				line-height: 35px;
 				text-align: center;
 				cursor: pointer;
+				font-size: 24px;
 			}
 		}
 		&.cont{
@@ -898,17 +942,49 @@ body.alertshow{
 			height: 140px;
 			padding: 8px 20px 0;
 			&>.contblock{
+				position: relative;
 				width: 89px;
 				height:83px;
 				margin: 0 auto;
 				border-radius:5px;
 				background-color: #fbb113;
+				&>i{
+					font-size: 40px;
+					color: #fff;
+				}
+				&>span{
+					position: absolute;
+					right: 2px;
+					top: 1px;
+					display: block;
+					width: 32px;
+					height: 32px;
+					&>i{
+						display: none;
+						position: absolute;
+						top: 3px;
+						right: 4px;
+					}
+					&>input[type='checkbox']{
+						position: absolute;
+						top:1px;
+						right: 1px;
+					}
+					&.lock{
+						background: url('../img/widgetbg.png') no-repeat;
+						&>i{
+							display: block;						}
+						&>input[type='checkbox']{
+							display: none;
+						}
+					}
+				}
 			}
 			&>span{
 				display: block;
 				margin:0 auto;
 				width: 89px;
-				padding:0 5px;
+				padding:10px 5px 0;
 				font-size: 15px;
 			}
 		}
@@ -922,9 +998,11 @@ body.alertshow{
 		height: 40px;
 		line-height: 40px;
 		background-color: #e94430;
+		color: #fff;
 		span{
 			position:absolute;
 			top:12px;
+			right: 10px;
 			width: 16px;
 			height: 16px;
 			line-height: 12px;
@@ -973,10 +1051,33 @@ body.alertshow{
 		}
 	}
 }
-
-
-
-
+//可调整顺序的模块相关css
+/*拖拽必要的样式*/
+@media(min-width:900px){
+	.gridly{
+		position:relative;
+	}
+	.gridly .brick .title{
+		cursor:move;
+	}
+	.brick{
+		position:absolute;
+		z-index:1;
+	}
+	.draging{
+		z-index: 2;
+		opacity: 0.8;
+		&>div{
+			border: 1px dashed #000;
+		}
+		
+	}
+}
+@media(min-device-width:900px){
+	body{
+		min-width: 900px;
+	}
+}
 
 
 

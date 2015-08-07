@@ -113,6 +113,9 @@ body .topbar .username span {
   height: 30px;
   cursor: pointer;
 }
+body .topbar .myfavorite .fa-heart-o {
+  display: none;
+}
 body .topbar .myfavorite .alertpanel {
   height: 270px;
   bottom: -270px;
@@ -138,6 +141,9 @@ body .topbar .myfavorite .alertpanel .addbtn {
   right: 20px;
   bottom: 15px;
   color: #ee4f3c;
+}
+body .topbar .username > i {
+  display: none;
 }
 body .topbar .username .alertpanel {
   width: 130px;
@@ -229,15 +235,18 @@ body .topbar .topright .username {
   position: relative;
   margin-left: 10px;
 }
-body .topbar .topright .username > span {
+body .topbar .topright .username > span .big {
   padding-right: 40px;
 }
-body .topbar .topright .username > span > i {
+body .topbar .topright .username > span .big > i {
   position: absolute;
   top: 7px;
   right: 0px;
 }
-body .topbar .topright .username > span.hasmessage::before {
+body .topbar .topright .username > span .small {
+  display: none;
+}
+body .topbar .topright .username > span.hasmessage .big::before {
   content: '';
   position: absolute;
   top: 10px;
@@ -275,6 +284,8 @@ body .leftbar > .menu {
   width: 100%;
   height: auto;
   max-height: 100%;
+  padding-top: 8px;
+  margin-top: -8px;
   color: #e8e8e8;
 }
 body .leftbar > .menu > li {
@@ -292,6 +303,9 @@ body .leftbar > .menu > li > a {
   width: 100%;
   line-height: 44px;
   padding-left: 60px;
+}
+body .leftbar > .menu > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 body .leftbar > .menu > li > a > i {
   position: absolute;
@@ -314,13 +328,16 @@ body .leftbar > .menu > li > .submenu {
   display: none;
   height: auto;
   width: 100%;
-  padding-left: 60px;
 }
 body .leftbar > .menu > li > .submenu > li {
   width: 100%;
+  padding-left: 60px;
   height: 35px;
   line-height: 35px;
   cursor: pointer;
+}
+body .leftbar > .menu > li > .submenu > li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 body .leftbar > .menu > li.open > a > div > i.fa-angle-right {
   display: none;
@@ -400,8 +417,10 @@ body.menuclose .leftbar > .menu > li.set:hover > .submenu {
   top: 44px;
   left: 72px;
   width: 150px;
-  padding-left: 40px;
   background-color: #d02b1e;
+}
+body.menuclose .leftbar > .menu > li.set:hover > .submenu > li {
+  padding-left: 40px;
 }
 body.menuclose .content {
   padding-left: 77px;
@@ -426,6 +445,10 @@ body.menuclose .content {
   width: 100%;
   height: 100%;
 }
+.content .slideContainer .contitem {
+  padding-top: 10px;
+  height: 100%;
+}
 .content .contitem {
   height: 50%;
   float: left;
@@ -434,12 +457,6 @@ body.menuclose .content {
 .content .contitem#newsblock,
 .content .contitem#taskblock {
   padding-bottom: 10px;
-}
-.content .contitem#documentblock,
-.content .contitem#scheduleblock,
-.content .contitem#stockblock {
-  padding-top: 10px;
-  height: 100%;
 }
 .content .contitem .newsContainer,
 .content .contitem .taskContainer,
@@ -774,11 +791,15 @@ body.menuclose .content {
 }
 .content .contitem .stockContainer .title a {
   display: block;
+  width: 35px;
+  height: 35px;
   position: absolute;
-  right: 10px;
-  top: -5px;
+  right: 5px;
+  top: 5px;
   color: #cf2c1b;
   font-size: 25px;
+  text-align: center;
+  line-height: 30px;
 }
 .content .contitem .stockContainer .title img {
   vertical-align: middle;
@@ -793,15 +814,23 @@ body.menuclose .content {
   width: 100%;
   height: 100%;
 }
-.content .contitem.nocont > * {
+.content .contitem > .noContainer {
   display: none;
-}
-.content .contitem.nocont > .noContainer {
-  display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: rgba(253, 189, 21, 0.7);
   cursor: pointer;
+}
+.content .contitem > .noContainer > i {
+  font-size: 56px;
+  color: #fff;
+}
+.content .contitem.nocont > div {
+  display: none;
+}
+.content .contitem.nocont > .noContainer {
+  display: block;
 }
 body.alertshow {
   overflow: hidden;
@@ -842,13 +871,14 @@ body.alertshow .masklayer {
 }
 .masklayer > .alertbox > .title span {
   position: absolute;
-  right: 15px;
-  top: 16px;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
+  right: 5px;
+  top: 5px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   text-align: center;
   cursor: pointer;
+  font-size: 24px;
 }
 .masklayer > .alertbox.cont {
   width: 100%;
@@ -870,17 +900,50 @@ body.alertshow .masklayer {
   padding: 8px 20px 0;
 }
 #widgetcenter > .cont > div > .contblock {
+  position: relative;
   width: 89px;
   height: 83px;
   margin: 0 auto;
   border-radius: 5px;
   background-color: #fbb113;
 }
+#widgetcenter > .cont > div > .contblock > i {
+  font-size: 40px;
+  color: #fff;
+}
+#widgetcenter > .cont > div > .contblock > span {
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+#widgetcenter > .cont > div > .contblock > span > i {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 4px;
+}
+#widgetcenter > .cont > div > .contblock > span > input[type='checkbox'] {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+#widgetcenter > .cont > div > .contblock > span.lock {
+  background: url('../img/widgetbg.png') no-repeat;
+}
+#widgetcenter > .cont > div > .contblock > span.lock > i {
+  display: block;
+}
+#widgetcenter > .cont > div > .contblock > span.lock > input[type='checkbox'] {
+  display: none;
+}
 #widgetcenter > .cont > div > span {
   display: block;
   margin: 0 auto;
   width: 89px;
-  padding: 0 5px;
+  padding: 10px 5px 0;
   font-size: 15px;
 }
 #addnewlink {
@@ -892,10 +955,12 @@ body.alertshow .masklayer {
   height: 40px;
   line-height: 40px;
   background-color: #e94430;
+  color: #fff;
 }
 #addnewlink > .title span {
   position: absolute;
   top: 12px;
+  right: 10px;
   width: 16px;
   height: 16px;
   line-height: 12px;
@@ -941,4 +1006,29 @@ body.alertshow .masklayer {
 }
 #addnewlink > .btngroup .btn:first-child {
   margin-right: 10px;
+}
+/*拖拽必要的样式*/
+@media (min-width: 900px) {
+  .gridly {
+    position: relative;
+  }
+  .gridly .brick .title {
+    cursor: move;
+  }
+  .brick {
+    position: absolute;
+    z-index: 1;
+  }
+  .draging {
+    z-index: 2;
+    opacity: 0.8;
+  }
+  .draging > div {
+    border: 1px dashed #000;
+  }
+}
+@media (min-device-width: 900px) {
+  body {
+    min-width: 900px;
+  }
 }

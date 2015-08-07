@@ -13,7 +13,6 @@
                 return _bind.apply(this, arguments); 
             };
     })();
-$(function(){
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
 	$(".menu>li>a").on('click',function(e){
 		e.preventDefault();
@@ -113,24 +112,44 @@ $(function(){
 	$(document).on('click',"[data-alert]",function(e){
 		e.preventDefault();
 		var id = $(this).attr("data-alert");
-		mcdalert($("#"+id).clone());
+		mcdalert($("#"+id).clone(true));
 	})
   
   	$(".slideBox")[0].addEventListener("touchend", touchEnd, false);
 
-})
-
+  	//STOCK的关闭x按钮
+  	 $("#stockblockclosebtn").on('click',function(){
+  	 		$(this).closest('.contitem').addClass('nocont');
+  	 })
+  	 //widgetcenter的checkbox
+  	 // 每一个checkbox都会有一个data-target属性，该属性等于其所控制的模块id
+  	 $("#widgetcenter .contblock input[type='checkbox']").change(function(){
+  	 	var target = $(this).attr("data-target");
+  	 	if($(this).is(":checked")){
+  	 		$("#"+target).removeClass('nocont');
+  	 	}
+  	 	else{
+  	 		$("#"+target).addClass('nocont');
+  	 	}
+  	 })
 function touchEnd(){
 	if($(window).width()<600 || $(window).width()>900 )
 		return;
 	var slideWidth=$(".slideBox").width();
 	if($(".slideContainer>div").scrollLeft()<slideWidth/6)
-		$(".slideContainer>div").animate({scrollLeft: 0}, 300);
+		$(".slideContainer>div").animate({scrollLeft: 0}, 100);
 	else
-		$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
+		$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 100);
 }
 
-
+//可调整顺序的模块相关js
+// var hasMouseDown = false;
+// $(".contitem.dragable .title").on('click',function(){
+// 	hasMouseDown = true;
+// })
+// $(".contitem.dragable .title").on('mousemove',function(e){
+	
+// })
 
 
 
