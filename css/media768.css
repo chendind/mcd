@@ -1,4 +1,7 @@
 @media (max-width: 1025px) {
+  body {
+    overflow-y: scroll;
+  }
   body .topbar .menutoggle {
     display: none;
   }
@@ -145,6 +148,9 @@
   }
   .content .contitem#stockblock {
     padding-left: 20px;
+  }
+  .contitem[id^='origin'] {
+    display: none;
   }
 }
 @media (max-width: 600px) {

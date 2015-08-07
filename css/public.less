@@ -959,22 +959,39 @@ body.alertshow{
 					display: block;
 					width: 32px;
 					height: 32px;
-					&>i{
+					&>.lockicon,&>.checkbox{
 						display: none;
 						position: absolute;
 						top: 3px;
 						right: 4px;
 					}
-					&>input[type='checkbox']{
-						position: absolute;
-						top:1px;
-						right: 1px;
+					&>.checkbox{
+						color:#fff;
+						display: block;
+						cursor: pointer;
+						.fa-square-o{
+							display: inline-block;
+						}
+						.fa-check-square-o{
+							position: relative;
+							left:1px;
+							display: none;
+						}
+						&.checked{
+							.fa-square-o{
+								display: none;
+							}
+							.fa-check-square-o{
+								display: inline-block;
+							}
+						}
 					}
 					&.lock{
 						background: url('../img/widgetbg.png') no-repeat;
-						&>i{
-							display: block;						}
-						&>input[type='checkbox']{
+						&>.lockicon{
+							display: block;						
+						}
+						&>.checkbox{
 							display: none;
 						}
 					}
@@ -1063,6 +1080,15 @@ body.alertshow{
 	.brick{
 		position:absolute;
 		z-index:1;
+		&:nth-child(1){
+			left:0;
+		}
+		&:nth-child(2){
+			left:33.33%;
+		}
+		&:nth-child(3){
+			left:66.67%;
+		}
 	}
 	.draging{
 		z-index: 2;
@@ -1073,11 +1099,11 @@ body.alertshow{
 		
 	}
 }
-@media(min-device-width:900px){
-	body{
-		min-width: 900px;
-	}
-}
+// @media(min-device-width:901px){
+// 	body{
+// 		min-width: 901px;
+// 	}
+// }
 
 
 

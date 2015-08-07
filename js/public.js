@@ -123,14 +123,15 @@
   	 })
   	 //widgetcenter的checkbox
   	 // 每一个checkbox都会有一个data-target属性，该属性等于其所控制的模块id
-  	 $("#widgetcenter .contblock input[type='checkbox']").change(function(){
-  	 	var target = $(this).attr("data-target");
-  	 	if($(this).is(":checked")){
-  	 		$("#"+target).removeClass('nocont');
-  	 	}
-  	 	else{
-  	 		$("#"+target).addClass('nocont');
-  	 	}
+  	 $("#widgetcenter .contblock .checkbox").bind("click",function(){
+  	 		$(this).toggleClass('checked');
+  	 		var target = $(this).attr("data-target");
+  	 		if($(this).hasClass('checked')){
+  	 			$("#"+target).removeClass('nocont');
+  	 		}
+  	 		else{
+  	 			$("#"+target).addClass('nocont');
+  	 		}
   	 })
 function touchEnd(){
 	if($(window).width()<600 || $(window).width()>900 )
@@ -148,7 +149,7 @@ function touchEnd(){
 // 	hasMouseDown = true;
 // })
 // $(".contitem.dragable .title").on('mousemove',function(e){
-	
+
 // })
 
 

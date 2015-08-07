@@ -919,24 +919,39 @@ body.alertshow .masklayer {
   width: 32px;
   height: 32px;
 }
-#widgetcenter > .cont > div > .contblock > span > i {
+#widgetcenter > .cont > div > .contblock > span > .lockicon,
+#widgetcenter > .cont > div > .contblock > span > .checkbox {
   display: none;
   position: absolute;
   top: 3px;
   right: 4px;
 }
-#widgetcenter > .cont > div > .contblock > span > input[type='checkbox'] {
-  position: absolute;
-  top: 1px;
-  right: 1px;
+#widgetcenter > .cont > div > .contblock > span > .checkbox {
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox .fa-square-o {
+  display: inline-block;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox .fa-check-square-o {
+  position: relative;
+  left: 1px;
+  display: none;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox.checked .fa-square-o {
+  display: none;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox.checked .fa-check-square-o {
+  display: inline-block;
 }
 #widgetcenter > .cont > div > .contblock > span.lock {
   background: url('../img/widgetbg.png') no-repeat;
 }
-#widgetcenter > .cont > div > .contblock > span.lock > i {
+#widgetcenter > .cont > div > .contblock > span.lock > .lockicon {
   display: block;
 }
-#widgetcenter > .cont > div > .contblock > span.lock > input[type='checkbox'] {
+#widgetcenter > .cont > div > .contblock > span.lock > .checkbox {
   display: none;
 }
 #widgetcenter > .cont > div > span {
@@ -1019,16 +1034,20 @@ body.alertshow .masklayer {
     position: absolute;
     z-index: 1;
   }
+  .brick:nth-child(1) {
+    left: 0;
+  }
+  .brick:nth-child(2) {
+    left: 33.33%;
+  }
+  .brick:nth-child(3) {
+    left: 66.67%;
+  }
   .draging {
     z-index: 2;
     opacity: 0.8;
   }
   .draging > div {
     border: 1px dashed #000;
-  }
-}
-@media (min-device-width: 900px) {
-  body {
-    min-width: 900px;
   }
 }

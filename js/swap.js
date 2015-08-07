@@ -20,11 +20,13 @@
 		
 		//初始化位置，启动drag()函数
 		this.init = function(){
+			//设置box属性为其克隆元素，用以定位
+			$(".gridly").append($(this).clone().css({"opacity":0,"z-index":"-1"}).removeClass('brick').attr("id","origin"+index));
+			this.box = $("#origin"+index);
 			$(this).css({
 				"left":this.box.position().left,
 				"top":this.box.position().top
 			}).attr("data-index",index);
-			// console.log(this.box.position().left);
 			this.drag();
 		}
 		this.move = function(callback) {  
@@ -83,7 +85,6 @@
 			})
 			
 			$(document).bind("touchmove mousemove ",function(evt){
-				evt.preventDefault();
 				if(isDrag){
 					evt.preventDefault();
 					var currentPointer = new Pointer(evt.pageX,evt.pageY);
@@ -109,9 +110,10 @@
 			})
 		}
 		if($(window).width()>900){
-			//设置box属性为其克隆元素，用以定位
-			$(".gridly").append($(this).clone().css({"opacity":0,"z-index":"-1"}).removeClass('brick').attr("id","origin"+index));
-			this.box = $("#origin"+index);
 			this.init();
 		}
+		//检测设备旋转
+		// $(window).bind("orientationchange",function(){
+		// 	this.init();
+		// });
 	})
