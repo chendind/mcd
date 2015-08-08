@@ -36,8 +36,11 @@
     padding-right: 35px;
     padding-bottom: 16px;
   }
-  .slideBox {
-    width: 150% !important;
+  .slideContainer > div {
+    overflow-x: auto;
+  }
+  .slideContainer .slideBox {
+    width: 150%;
   }
   .content .contitem {
     width: 100%;

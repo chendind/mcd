@@ -1,5 +1,6 @@
 $(function(){
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
+	var slideStart=0;
 	$(".menu>li>a").on('click',function(){
 		var li = $(this).parent('li');
 		var l = li.find("ul.submenu>li").length-0;
@@ -87,20 +88,30 @@ $(function(){
 		var id = $(this).attr("data-alert");
 		mcdalert($("#"+id).clone());
 	})
-  
+  	
+  	$(".slideBox")[0].addEventListener("touchstart", touchStart, false);
   	$(".slideBox")[0].addEventListener("touchend", touchEnd, false);
+  	function touchStart(){
+  		var slideWidth=$(".slideBox").width();
+  		if($(".slideContainer>div").is(":animated"))
+  			slideStart=-999;
+  		else
+  			slideStart=$(".slideContainer>div").scrollLeft();
+  	}
+  	function touchEnd(){
+		if($(window).width()<600 || $(window).width()>900 || slideStart==-999)
+			return;
+		var slideWidth=$(".slideBox").width();
+		var slideEnd=$(".slideContainer>div").scrollLeft()
+		if(slideStart>slideEnd)
+			$(".slideContainer>div").animate({scrollLeft: 0}, 300);
+		else
+			$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
+	}	
 
 })
 
-function touchEnd(){
-	if($(window).width()<600 || $(window).width()>900 )
-		return;
-	var slideWidth=$(".slideBox").width();
-	if($(".slideContainer>div").scrollLeft()<slideWidth/6)
-		$(".slideContainer>div").animate({scrollLeft: 0}, 300);
-	else
-		$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
-}
+
 
 
 

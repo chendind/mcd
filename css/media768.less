@@ -49,9 +49,14 @@
 			padding-bottom: 16px;
 		}
 	}
-	.slideBox{
-		width: 150% !important;
-	}
+	.slideContainer{
+			&>div{
+				overflow-x: auto;
+			}
+			.slideBox{
+				width: 150%;
+			}
+		}
 	.content{
 		.contitem{
 			width: 100%;
