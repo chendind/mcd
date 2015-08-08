@@ -15,6 +15,7 @@
     })();
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
 	var slideStart=0;
+
 	$(".menu>li>a").on('click',function(e){
 		e.preventDefault();
 		var li = $(this).parent('li');
@@ -157,7 +158,6 @@ $(".changetheme>alertpanel>itembox>item").bind('click',function(){
 	var theme = $(this).attr("data-theme");
 	body.removeClass('themenormal themezgf').addClass(theme);
 })
-
 
 
 
