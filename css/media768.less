@@ -114,9 +114,11 @@
 			height:auto;
 			overflow: hidden;
 			position: relative;
-			padding-left: 30px;
+			// padding-left: 30px;
+			padding-left: 0px;
 			padding-top: 76px;
-			padding-right: 30px;
+			// padding-right: 30px;
+			padding-right: 0px;
 			padding-bottom: 16px;
 		}
 	}
@@ -129,9 +131,28 @@
 			}
 		}
 	.content{
+		// .slideContainer{
+		// 	.contitem{
+		// 		&#documentblock{
+		// 			padding-left: 30px;
+		// 			padding-right: 7.5px;
+		// 		}
+		// 		&#scheduleblock{
+		// 			padding-left: 7.5px;
+		// 			padding-right: 30px;
+		// 		}
+		// 		&#stockblock{
+		// 			margin-left: -22.5px;
+		// 			padding-left: 7.5px;
+		// 			padding-right: 30px;
+		// 		}
+		// 	}
+		// }
 		.contitem{
 			width: 100%;
-			padding-left:0;
+			padding-left: 0;
+			// padding-left:30px;
+			// padding-right: 30px;
 			&#newsblock{
 				height: 330px;
 			}
@@ -179,7 +200,32 @@
 		display: none;
 	}
 }
-
+@media(max-width:900px)and(min-width:601px){
+	.content{
+		.slideContainer{
+			.contitem{
+				&#documentblock{
+					padding-left: 30px;
+					padding-right: 7.5px;
+				}
+				&#scheduleblock{
+					padding-left: 7.5px;
+					padding-right: 30px;
+				}
+				&#stockblock{
+					margin-left: -22.5px;
+					padding-left: 7.5px;
+					padding-right: 30px;
+				}
+			}
+		}
+		.contitem{
+			width: 100%;
+			padding-left:30px;
+			padding-right: 30px;
+		}
+	}
+}
 // 600以下 使用手机布局
 @media(max-width:600px){
 	body{

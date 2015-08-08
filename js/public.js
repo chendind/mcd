@@ -1,5 +1,5 @@
 // 在ipad上与电脑上分别触发touchend与click事件
-(function(){
+	(function(){
         var isTouch = ('ontouchend' in document.documentElement) ? 'touchend' : 'click',
         	 _on = $.fn.on,
         	 _one = $.fn.one,
@@ -50,11 +50,11 @@
 			body.addClass('menuclose');
 		}
 	// window resize时候给body增加或删去一些class
-	$(window).on('resize',function(){
-		if(!body.hasClass('menuclose')&&$(this).width() < 1025){
-			body.addClass('menuclose');
-		}
-	})
+	// $(window).on('resize',function(){
+	// 	if(!body.hasClass('menuclose')&&$(this).width() < 1025){
+	// 		body.addClass('menuclose');
+	// 	}
+	// })
 	var linknum = $("#myfavorite .alertpanel .linkitem").length-0, boxnum = Math.ceil((linknum+1)/6),
 	    box = $("<div class=\"linkbox\"></div>");
 	    // tail = $('<a class="addbtn">Add New Link</a><div class="clear"></div>');
@@ -132,7 +132,7 @@
 		if(slideStart>slideEnd)
 			$(".slideContainer>div").animate({scrollLeft: 0}, 300);
 		else
-			$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
+			$(".slideContainer>div").animate({scrollLeft: slideWidth/3-22.5}, 300);
 	}	
 
 
