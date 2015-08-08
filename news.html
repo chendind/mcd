@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link href="" rel="icon">
+    <link rel="stylesheet" href="./font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/media768.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/themezgf.css">
+
+    <script src="./js/jquery-1.7.2.min.js"></script>
+
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="logobox">
+        <img src="./img/mcdlogo1.png" class="logo1" alt="logo">
+        <img src="./img/mcdlogo2.png" class="logo2" alt="logo">
+      </div>
+      <i class="fa fa-reorder menutoggle" id="menutoggle"></i>
+      <div class="myfavorite" id="myfavorite">
+
+        <span data-role="switch">
+          <i class="fa fa-heart-o"></i>
+          <span>My Favorite 
+              <i class="fa fa-caret-down"></i>
+          </span>
+        </span>
+        <div class="alertpanel">
+            <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Built in BS3+</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Full Customizable</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Huge Components</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Tons of widgets</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Fontawesome</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Description goes here</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Amaging Dashboard</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Max 5 star ration</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Huge Component and User Likes</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Easy to Cutomize</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Very easy to use</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Anchor Icon</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Full Customizable</a></div>
+            <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
+            <a class="addbtn" data-alert="addnewlink">Add New Link</a><div class="clear"></div>
+        </div>
+      </div>
+      <div class="topright">
+        <div class="changetheme">
+          <i class="fa fa-sliders fa-rotate-90" data-role="switch"></i>
+          <div class="alertpanel">
+              <div class="title">Choose Theme Color</div>
+              <div class="itembox">
+                  <div class="item" data-theme="themenormal"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item" data-theme="themezgf">
+                    <img src="./img/zhong.png" />
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="username" id="username">
+          <span class="hasmessage" data-role="switch">
+            <span class="big">Paul Smith<i class="fa fa-caret-down"></i></span>
+            <span class="small"><i class="fa fa-user"></i><i class="fa fa-caret-down" style="font-size:20px;margin-left:20px;"></i></span>
+          </span>
+          <div class="alertpanel">
+              <div><i class="fa fa-fw fa-user"></i>Profile</div>
+              <div><i class="fa fa-fw fa-sign-out"></i>Log out</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="leftbar">
+      <ul class="menu">
+        <li>
+          <a>
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span>Operations</spam>
+          </a>  
+        </li>
+        <li>
+          <a><i class="fa fa-fw fa-credit-card"></i>
+            <span>Finance</span>
+            <div>
+              <i class="fa fa-fw fa-angle-right"></i>
+              <i class="fa fa-fw fa-angle-down"></i>
+            </div>
+          </a>  
+          <ul class="submenu">
+              <li>Subnav1</li>
+              <li>Subnav2</li>
+              <li>Subnav3</li>
+          </ul>
+        </li>
+        <li>
+          <a><i class="fa fa-fw fa-globe"></i><span>Development</span></a>  
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-fw fa-laptop"></i>
+            <span>IT</span>
+            <div>
+              <i class="fa fa-fw fa-angle-right"></i>
+              <i class="fa fa-fw fa-angle-down"></i>
+            </div>
+          </a> 
+          <ul class="submenu">
+              <li>Subnav1</li>
+              <li>Subnav2</li>
+              <li>Subnav3</li>
+          </ul> 
+        </li>
+        <li>
+          <a><i class="fa fa-fw fa-user"></i><span>User management</span></a>  
+        </li>
+        <li>
+          <a><i class="fa fa-fw fa-leaf"></i><span>Franchising</span></a>  
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-fw fa-line-chart"></i>
+            <span>Report</span>
+            <div>
+              <i class="fa fa-fw fa-angle-right"></i>
+              <i class="fa fa-fw fa-angle-down"></i>
+            </div>
+          </a>  
+          <ul class="submenu">
+              <li>Subnav1</li>
+              <li>Subnav2</li>
+              <li>Subnav3</li>
+          </ul>
+        </li>
+        <li>
+          <a><i class="fa fa-fw fa-question-circle"></i><span>Help</span></a>  
+        </li>
+      </ul>
+    </div>
+    <div class="content" id="content">
+      <div class="newsBox">
+        <div class="boxBanner">
+          News_麦当劳"我创我味来"概念店登陆中国
+        </div>
+        <div class="boxContent">
+          <h5 class="title">麦当劳"我创我味来"概念店登陆中国</h5>
+          <span class="time">2015-6-11 09:33</span>
+          <p>麦当劳中国今天正式宣布“我创我味来”(Create Your Taste)概念店登陆中国，首站落地上海。2015年是麦当劳入华25周年，“我创我味来”是公司在引领餐饮创新与强化汉堡领导力的又一里程碑。消费者今后能在“我创我味来”概念店根据个人喜好，从24种精选食材中，创作专属的汉堡。</p>
+          <p>麦当劳(中国)有限公司首席执行官张家茵女士表示：我创我味来’是麦当劳进入中国25年，送给消费者的惊喜。作为全球领先的汉堡公司，我们过去为中国消费者推广了汉堡和西式饮食文化。这次‘我创我味来’将为中国消费者提供自创汉堡、贴心服务和数字化点餐等全新体验，以满足他们热衷于创新、追求个性化的需求。”</p>
+          <img src=""><img src="">
+          <ul class="nav">
+            <li>上一篇:<a href="#">和同学去吃麦当劳</a></li>
+            <li>下一篇:<a href="#">麦当劳新品</a></li>
+          </ul>
+          <a class="back" href="#">返回</a>
+        </div>
+      </div>
+    </div>
+      <script src="./js/public.js"></script>
+    <script src="./js/swap.js"></script>
+</body>
+</html>
