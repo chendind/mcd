@@ -12,15 +12,12 @@
                 arguments[0] = (arguments[0] === 'click') ? isTouch: arguments[0];
                 return _bind.apply(this, arguments); 
             };
-    //})();
+    })();
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
-//<<<<<<< HEAD
 	var slideStart=0;
-	//$(".menu>li>a").on('click',function(){
-//=======
+
 	$(".menu>li>a").on('click',function(e){
 		e.preventDefault();
-//>>>>>>> origin/master
 		var li = $(this).parent('li');
 		// if(body.hasClass("menuclose")){
 
@@ -157,15 +154,6 @@
   	 			$("#"+target).addClass('nocont');
   	 		}
   	 })
-})
-//可调整顺序的模块相关js
-// var hasMouseDown = false;
-// $(".contitem.dragable .title").on('click',function(){
-// 	hasMouseDown = true;
-// })
-// $(".contitem.dragable .title").on('mousemove',function(e){
-
-// })
 
 
 
