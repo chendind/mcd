@@ -739,6 +739,31 @@ body.menuclose{
 				}
 			}
 		}
+		.emptySchedule{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				display: none;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+				&>div{
+					width: 210px;
+					height: 50px;
+					.fa-stack{
+						vertical-align: top;
+						color: #FDAD15;
+					}
+				}
+				.warning{
+					display: inline-block;
+					height: 50px;
+					line-height: 25px;
+					font-size: 20px;
+					color: #730000;
+				}
+			}
 		.scheduleContainer{
 			padding-top: 59px;
 			background-color: rgba(223,0,0,0.8);
@@ -875,6 +900,12 @@ body.menuclose{
 		&>.noContainer{
 			display: block;
 		}
+	}
+	
+	.noSchedule{
+			.emptySchedule{
+				display: block;
+			}
 	}
 }
 body.alertshow{
