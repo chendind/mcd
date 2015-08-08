@@ -129,9 +129,9 @@
 			return;
 		var slideWidth=$(".slideBox").width();
 		var slideEnd=$(".slideContainer>div").scrollLeft()
-		if(slideStart>slideEnd)
+		if(slideStart>slideEnd+10)
 			$(".slideContainer>div").animate({scrollLeft: 0}, 300);
-		else
+		else if(slideStart<slideEnd-10)
 			$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
 	}	
 
