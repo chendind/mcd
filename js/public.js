@@ -14,13 +14,9 @@
             };
     })();
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
-<<<<<<< HEAD
 	var slideStart=0;
-	$(".menu>li>a").on('click',function(){
-=======
 	$(".menu>li>a").on('click',function(e){
 		e.preventDefault();
->>>>>>> origin/master
 		var li = $(this).parent('li');
 		// if(body.hasClass("menuclose")){
 
@@ -39,10 +35,10 @@
 		
 		li.addClass('set').siblings('li').removeClass('set');
 	})
-	// menuclose状态下鼠标移动改变左菜单状态
 
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');
+		positioncheck();
 	})
 
 	// 公关的页面alertpanel关闭
@@ -99,8 +95,6 @@
 		}
 	})
 
-	// 自定义模块
-
 
 	//弹出窗口
 	function mcdalert(cont){
@@ -140,11 +134,8 @@
 			$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
 	}	
 
-<<<<<<< HEAD
-})
 
 
-=======
   	//STOCK的关闭x按钮
   	 $("#stockblockclosebtn").on('click',function(){
   	 		$(this).closest('.contitem').addClass('nocont');
@@ -161,25 +152,13 @@
   	 			$("#"+target).addClass('nocont');
   	 		}
   	 })
-function touchEnd(){
-	if($(window).width()<600 || $(window).width()>900 )
-		return;
-	var slideWidth=$(".slideBox").width();
-	if($(".slideContainer>div").scrollLeft()<slideWidth/6)
-		$(".slideContainer>div").animate({scrollLeft: 0}, 100);
-	else
-		$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 100);
-}
->>>>>>> origin/master
+// change theme color
+$(".changetheme>alertpanel>itembox>item").bind('click',function(){
+	var theme = $(this).attr("data-theme");
+	body.removeClass('themenormal themezgf').addClass(theme);
+})
 
-//可调整顺序的模块相关js
-// var hasMouseDown = false;
-// $(".contitem.dragable .title").on('click',function(){
-// 	hasMouseDown = true;
-// })
-// $(".contitem.dragable .title").on('mousemove',function(e){
 
-// })
 
 
 

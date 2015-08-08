@@ -1,0 +1,24 @@
+body.themezgf {
+  background-image: url(../img/themezgfbg.jpg);
+}
+body.themezgf .leftbar {
+  background-color: rgba(208, 43, 30, 0.9);
+}
+body.themezgf .content .contitem .taskContainer {
+  background-image: url(../img/themezgf-fish1.jpg);
+  background-repeat: no-repeat;
+}
+body.themezgf .content .contitem .taskContainer .title {
+  background: none;
+  color: #fff;
+}
+body.themezgf .content .contitem .taskContainer > div {
+  background-image: url(../img/themezgf-fish2.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+body.themezgf .content .contitem .scheduleContainer {
+  background-image: url(../img/themezgf-mai.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}

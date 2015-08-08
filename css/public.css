@@ -68,7 +68,6 @@ body .topbar > .logobox {
   height: 60px;
   width: 214px;
   overflow: hidden;
-  background-color: #d02b1e;
 }
 body .topbar > .logobox > .logo1 {
   position: absolute;
@@ -186,6 +185,8 @@ body .topbar .topright .changetheme {
 }
 body .topbar .topright .changetheme i {
   cursor: pointer;
+  padding-bottom: 2px;
+  padding-right: 2px;
 }
 body .topbar .topright .changetheme .alertpanel {
   width: 180px;

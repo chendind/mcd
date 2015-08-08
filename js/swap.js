@@ -8,13 +8,7 @@
 			this.top = top ;
 		}
 	$(window).resize(function(){
-		$(".brick").each(function(){
-			var index = $(this).attr("data-index");
-				$(this).css({
-					"left":this.box.position().left,
-					"top":this.box.position().top
-				});
-		})
+		positioncheck();
 	})
 	$(".brick").each(function(index){
 		
@@ -116,4 +110,16 @@
 		// $(window).bind("orientationchange",function(){
 		// 	this.init();
 		// });
+		
+
 	})
+function positioncheck(){
+			$(".brick").each(function(){
+			var index = $(this).attr("data-index");
+				$(this).css({
+					"left":this.box.position().left,
+					"top":this.box.position().top
+				});
+			})
+		}
+
