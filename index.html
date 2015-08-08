@@ -6,17 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title></title>
     <link href="" rel="icon">
+    <link rel="stylesheet" href="./font-awesome-4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/media768.css">
     <script src="./js/jquery-1.7.2.min.js"></script>
+
   </head>
   <body>
     <div class="topbar">
-      <img src="./img/MCD_logo_small.jpg" alt="logo">
-      <div class="menutoggle" id="menutoggle"></div>
+      <div class="logobox">
+        <img src="./img/mcdlogo1.png" class="logo1" alt="logo">
+        <img src="./img/mcdlogo2.png" class="logo2" alt="logo">
+      </div>
+      <i class="fa fa-reorder menutoggle" id="menutoggle"></i>
       <div class="myfavorite" id="myfavorite">
-        <span data-role="switch">My Favorite</span>
+
+        <span data-role="switch">
+          <i class="fa fa-heart-o"></i>
+          <span>My Favorite 
+              <i class="fa fa-caret-down"></i>
+          </span>
+        </span>
         <div class="alertpanel">
             <div class="linkitem"><a href="#" target="_blank">Slick Mega Navigation</a></div>
             <div class="linkitem"><a href="#" target="_blank">Built in BS3+</a></div>
@@ -38,25 +49,47 @@
       </div>
       <div class="topright">
         <div class="changetheme">
-          <span>M</span>
-        </div>
-        <div class="username hasmessage" id="username">
-          <span data-role="switch">Paul Smith</span>
+          <i class="fa fa-sliders fa-rotate-90" data-role="switch"></i>
           <div class="alertpanel">
-              <div>Profile</div>
-              <div>Log out</div>
+              <div class="title">Choose Theme Color</div>
+              <div class="itembox">
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item"></div>
+                  <div class="item">
+                    <img src="./img/zhong.png" />
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="username" id="username">
+          <span class="hasmessage" data-role="switch">
+            <span class="big">Paul Smith<i class="fa fa-caret-down"></i></span>
+            <span class="small"><i class="fa fa-user"></i><i class="fa fa-caret-down" style="font-size:20px;margin-left:20px;"></i></span>
+          </span>
+          <div class="alertpanel">
+              <div><i class="fa fa-fw fa-user"></i>Profile</div>
+              <div><i class="fa fa-fw fa-sign-out"></i>Log out</div>
           </div>
         </div>
       </div>
     </div>
     <div class="leftbar">
-      
       <ul class="menu">
         <li>
-          <a>Operations</a>  
+          <a>
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span>Operations</spam>
+          </a>  
         </li>
         <li>
-          <a>Finance</a>  
+          <a><i class="fa fa-fw fa-credit-card"></i>
+            <span>Finance</span>
+            <div>
+              <i class="fa fa-fw fa-angle-right"></i>
+              <i class="fa fa-fw fa-angle-down"></i>
+            </div>
+          </a>  
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -64,10 +97,17 @@
           </ul>
         </li>
         <li>
-          <a>Development</a>  
+          <a><i class="fa fa-fw fa-globe"></i><span>Development</span></a>  
         </li>
         <li>
-          <a>IT</a> 
+          <a>
+            <i class="fa fa-fw fa-laptop"></i>
+            <span>IT</span>
+            <div>
+              <i class="fa fa-fw fa-angle-right"></i>
+              <i class="fa fa-fw fa-angle-down"></i>
+            </div>
+          </a> 
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -75,13 +115,20 @@
           </ul> 
         </li>
         <li>
-          <a>User management</a>  
+          <a><i class="fa fa-fw fa-user"></i><span>User management</span></a>  
         </li>
         <li>
-          <a>Franchising</a>  
+          <a><i class="fa fa-fw fa-leaf"></i><span>Franchising</span></a>  
         </li>
         <li>
-          <a>Report</a>  
+          <a>
+            <i class="fa fa-fw fa-line-chart"></i>
+            <span>Report</span>
+            <div>
+              <i class="fa fa-fw fa-angle-right"></i>
+              <i class="fa fa-fw fa-angle-down"></i>
+            </div>
+          </a>  
           <ul class="submenu">
               <li>Subnav1</li>
               <li>Subnav2</li>
@@ -89,7 +136,7 @@
           </ul>
         </li>
         <li>
-          <a>Help</a>  
+          <a><i class="fa fa-fw fa-question-circle"></i><span>Help</span></a>  
         </li>
       </ul>
     </div>
@@ -158,8 +205,8 @@
       </div>
       <div class="slideContainer">
         <div>
-          <div class="slideBox">
-            <div class="contitem one-third" id="documentblock">
+          <div class="slideBox gridly">
+            <div class="contitem one-third brick" id="documentblock">
               <div class="documentContainer">
                 <h5 class="title">DOCUMENT CENTER</h5>
                 <div class="listContainer">
@@ -196,7 +243,7 @@
                 </div>
               </div>
             </div>
-            <div class="contitem one-third" id="scheduleblock">
+            <div class="contitem one-third brick" id="scheduleblock">
               <div class="scheduleContainer">
                 <div class="title">
                   <img src="img/flag.png" alt=""/>
@@ -224,18 +271,20 @@
                 </div>
               </div>
             </div>
-            <div class="contitem one-third" id="stockblock">
+            <div class="contitem one-third brick" id="stockblock">
               <div class="stockContainer">
                 <div class="title">
                   <img src="img/stock.png" alt="" />
                   <span>STOCK</span>
-                  <a href="#">×</a>
+                  <a id="stockblockclosebtn">×</a>
                 </div>
                 <div class="listContainer">
                   <img src="img/stockimg.png" alt="" />
                 </div>
               </div>
-              <div class="noContainer" id="chooseContainerBtn" data-alert="widgetcenter"></div>
+              <div class="noContainer" id="chooseContainerBtn" data-alert="widgetcenter">
+                 <i class="fa fa-plus veryCenter"></i>
+              </div>
             </div>
             <div class="clear"></div>
           </div>
@@ -251,15 +300,42 @@
         </div>
         <div class="cont">
           <div>
-            <div class="contblock"></div>
+            <div class="contblock">
+               <i class="fa fa-file-text veryCenter"></i>
+               <span class="lock">
+                  <span class="lockicon"><i class="fa fa-lock"></i></span>
+                  <span class="checkbox"><!-- add a class "checked" to this <SPAN> tag to control the checkbox's statement -->
+                    <i class="fa fa-fw fa-check-square-o"></i>
+                    <i class="fa fa-fw fa-square-o"></i>
+                  </span>
+              </span>
+            </div>
             <span>Document Center</span>
           </div>
           <div>
-            <div class="contblock"></div>
+            <div class="contblock" style="background-color:#dc1d29;">
+              <i class="fa fa-table veryCenter"></i>
+              <span class="lock">
+                <span class="lockicon"><i class="fa fa-lock"></i></span>
+                <span class="checkbox"><!-- add a class "checked" to this <SPAN> tag to control the checkbox's statement -->
+                  <i class="fa fa-fw fa-check-square-o"></i>
+                  <i class="fa fa-fw fa-square-o"></i>
+                </span>
+              </span>
+            </div>
             <span style="text-align:center;">Schedule</span>
           </div>
           <div>
-            <div class="contblock"></div>
+            <div class="contblock" style="background-color:#6280f7;">
+              <i class="fa fa-bar-chart veryCenter"></i>
+              <span class="">
+                <span class="lockicon"><i class="fa fa-lock"></i></span>
+                <span class="checkbox" data-target="stockblock"><!-- add a class "checked" to this <SPAN> tag to control the checkbox's statement -->
+                  <i class="fa fa-fw fa-check-square-o"></i>
+                  <i class="fa fa-fw fa-square-o"></i>
+                </span>
+              </span>
+            </div>
             <span style="text-align:center;">Stock</span>
           </div>
         </div>
@@ -281,6 +357,7 @@
     <div class="masklayer">
     </div>
     <script src="./js/public.js"></script>
+    <script src="./js/swap.js"></script>
 </body>
 </html>
 

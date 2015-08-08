@@ -1,19 +1,45 @@
-$(function(){
+// 在ipad上与电脑上分别触发touchend与click事件
+(function(){
+        var isTouch = ('ontouchend' in document.documentElement) ? 'touchend' : 'click',
+        	 _on = $.fn.on,
+        	 _one = $.fn.one,
+        	 _bind = $.fn.bind;
+            $.fn.on = function(){
+                arguments[0] = (arguments[0] === 'click') ? isTouch: arguments[0];
+                return _on.apply(this, arguments); 
+            };
+            $.fn.bind = function(){
+                arguments[0] = (arguments[0] === 'click') ? isTouch: arguments[0];
+                return _bind.apply(this, arguments); 
+            };
+    })();
 	var body = $('body'), liheight = 44 , subliheight = 35, speed = 300;
+<<<<<<< HEAD
 	var slideStart=0;
 	$(".menu>li>a").on('click',function(){
+=======
+	$(".menu>li>a").on('click',function(e){
+		e.preventDefault();
+>>>>>>> origin/master
 		var li = $(this).parent('li');
-		var l = li.find("ul.submenu>li").length-0;
-		if(l){
-			if(li.hasClass('open')&&li.hasClass('set')){
-				li.stop(true).animate({"height":liheight}, speed).removeClass('open');
+		// if(body.hasClass("menuclose")){
+
+		// }
+		// else{
+			var l = li.find("ul.submenu>li").length-0;
+			if(l){
+				if(li.hasClass('open')&&li.hasClass('set')){
+					li.stop(true).animate({"height":liheight}, speed).removeClass('open');
+				}
+				else{
+					li.stop(true).animate({"height":subliheight*l+liheight}, speed).addClass('open');
+				}
 			}
-			else{
-				li.stop(true).animate({"height":subliheight*l+liheight},speed).addClass('open');
-			}
-		}
+		// }
+		
 		li.addClass('set').siblings('li').removeClass('set');
 	})
+	// menuclose状态下鼠标移动改变左菜单状态
 
 	$("#menutoggle").on('click',function(){
 		body.toggleClass('menuclose');
@@ -21,7 +47,7 @@ $(function(){
 
 	// 公关的页面alertpanel关闭
 	$(document).on('click',function(){
-		$("[data-role='switch']").removeClass('open');
+		$("[data-role='switch']").closest(".open").removeClass('open');
 	})
 	if(!body.hasClass('menuclose')&&$(this).width() < 1025){
 			body.addClass('menuclose');
@@ -40,7 +66,6 @@ $(function(){
 		var thisbox = box.clone().appendTo($("#myfavorite .alertpanel"));
 		$.each($("#myfavorite .alertpanel>.linkitem"),function(index){
 			if(index<6){
-				console.log($(this).text());
 	    		$(this).appendTo(thisbox);
 			}
 		})
@@ -53,7 +78,13 @@ $(function(){
 	}
 	$("[data-role='switch']").on('click',function(e){
 		e.stopPropagation();
-		$(this).parent().toggleClass("open");
+		if($(this).parent().hasClass('open')){
+			$("[data-role='switch']").parent().removeClass('open');
+		}
+		else{
+			$("[data-role='switch']").parent().removeClass('open');
+			$(this).parent().addClass("open");
+		}
 	})
 	$(document).on('click',".alertpanel",function(e){
 		e.stopPropagation();
@@ -84,9 +115,9 @@ $(function(){
 		mcdalerthide();
 	})
 	$(document).on('click',"[data-alert]",function(e){
-		e.preventDeafault;
+		e.preventDefault();
 		var id = $(this).attr("data-alert");
-		mcdalert($("#"+id).clone());
+		mcdalert($("#"+id).clone(true));
 	})
   	
   	$(".slideBox")[0].addEventListener("touchstart", touchStart, false);
@@ -109,11 +140,46 @@ $(function(){
 			$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 300);
 	}	
 
+<<<<<<< HEAD
 })
 
 
+=======
+  	//STOCK的关闭x按钮
+  	 $("#stockblockclosebtn").on('click',function(){
+  	 		$(this).closest('.contitem').addClass('nocont');
+  	 })
+  	 //widgetcenter的checkbox
+  	 // 每一个checkbox都会有一个data-target属性，该属性等于其所控制的模块id
+  	 $("#widgetcenter .contblock .checkbox").bind("click",function(){
+  	 		$(this).toggleClass('checked');
+  	 		var target = $(this).attr("data-target");
+  	 		if($(this).hasClass('checked')){
+  	 			$("#"+target).removeClass('nocont');
+  	 		}
+  	 		else{
+  	 			$("#"+target).addClass('nocont');
+  	 		}
+  	 })
+function touchEnd(){
+	if($(window).width()<600 || $(window).width()>900 )
+		return;
+	var slideWidth=$(".slideBox").width();
+	if($(".slideContainer>div").scrollLeft()<slideWidth/6)
+		$(".slideContainer>div").animate({scrollLeft: 0}, 100);
+	else
+		$(".slideContainer>div").animate({scrollLeft: slideWidth/3}, 100);
+}
+>>>>>>> origin/master
 
+//可调整顺序的模块相关js
+// var hasMouseDown = false;
+// $(".contitem.dragable .title").on('click',function(){
+// 	hasMouseDown = true;
+// })
+// $(".contitem.dragable .title").on('mousemove',function(e){
 
+// })
 
 
 

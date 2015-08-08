@@ -19,7 +19,7 @@ ul {
   margin: 0;
 }
 body,
-input,
+input[type="text"],
 button {
   background-color: #fff;
   color: #555;

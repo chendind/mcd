@@ -1,8 +1,17 @@
+@media (max-width: 1025px) {
+  body {
+    overflow-y: scroll;
+  }
+  body .topbar .menutoggle {
+    display: none;
+  }
+}
 @media (max-width: 900px) {
   html {
     height: auto;
   }
   body {
+    overflow: hidden;
     height: auto;
   }
   body .topbar {
@@ -12,15 +21,71 @@
     padding-left: 72px !important;
     background-color: #eb1e25;
   }
-  body .topbar > img {
-    width: 72px;
-    height: 100%;
+  body .topbar > .logobox {
+    background-color: #eb1e25;
+  }
+  body .topbar > .logobox > .logo2 {
+    display: none;
+  }
+  body .topbar .menutoggle {
+    display: inline-block;
+    color: #fff;
+    margin-left: 15px;
+    font-size: 22px;
+  }
+  body .topbar .myfavorite {
+    position: absolute;
+    right: 152px;
+    top: 16px;
+  }
+  body .topbar .myfavorite .fa-heart-o {
+    display: inline-block;
+    color: #fff;
+  }
+  body .topbar .myfavorite > span > span {
+    display: none;
+  }
+  body .topbar .myfavorite > span > i {
+    font-size: 25px;
+  }
+  body .topbar .topright {
+    padding-right: 30px;
+    width: 136px;
+  }
+  body .topbar .topright .changetheme {
+    background: none;
+    font-size: 25px;
+  }
+  body .topbar .topright .changetheme .alertpanel {
+    right: 30px;
+  }
+  body .topbar .topright .username > span .big {
+    display: none;
+  }
+  body .topbar .topright .username > span .small {
+    display: block;
+  }
+  body .topbar .topright .username > span .small > i {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+  }
+  body .topbar .myfavorite .alertpanel {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0px;
   }
   body .leftbar {
     width: 100% !important;
   }
   body .leftbar > .menu {
     height: 100%;
+  }
+  body.menuclose {
+    overflow: scroll;
   }
   body.menuclose .leftbar {
     display: none;
@@ -31,9 +96,9 @@
     height: auto;
     overflow: hidden;
     position: relative;
-    padding-left: 35px;
+    padding-left: 30px;
     padding-top: 76px;
-    padding-right: 35px;
+    padding-right: 30px;
     padding-bottom: 16px;
   }
   .slideContainer > div {
@@ -86,6 +151,9 @@
   }
   .content .contitem#stockblock {
     padding-left: 20px;
+  }
+  .contitem[id^='origin'] {
+    display: none;
   }
 }
 @media (max-width: 600px) {

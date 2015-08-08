@@ -61,19 +61,43 @@ body .topbar {
   z-index: 6;
   line-height: 60px;
 }
-body .topbar > img {
+body .topbar > .logobox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 214px;
+  overflow: hidden;
+  background-color: #d02b1e;
+}
+body .topbar > .logobox > .logo1 {
   position: absolute;
   left: 0;
   top: 0;
   display: block;
   height: 60px;
   width: 72px;
+  padding: 14px 18px;
+}
+body .topbar > .logobox > .logo2 {
+  position: absolute;
+  left: 65px;
+  top: 22px;
+  display: block;
+  height: 16px;
+  width: 130px;
 }
 body .topbar .menutoggle {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: #d00;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #d02b1e;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 body .topbar .myfavorite,
 body .topbar .username {
@@ -81,11 +105,16 @@ body .topbar .username {
   display: inline-block;
   height: 30px;
   line-height: 30px;
+}
+body .topbar .myfavorite span,
+body .topbar .username span {
+  position: relative;
+  display: inline-block;
+  height: 30px;
   cursor: pointer;
 }
-body .topbar .myfavorite.open .alertpanel,
-body .topbar .username.open .alertpanel {
-  display: block;
+body .topbar .myfavorite .fa-heart-o {
+  display: none;
 }
 body .topbar .myfavorite .alertpanel {
   height: 270px;
@@ -113,17 +142,22 @@ body .topbar .myfavorite .alertpanel .addbtn {
   bottom: 15px;
   color: #ee4f3c;
 }
+body .topbar .username > i {
+  display: none;
+}
 body .topbar .username .alertpanel {
-  width: 140px;
+  width: 130px;
   height: 84px;
-  right: -20px;
+  right: 0px;
   top: 30px;
 }
 body .topbar .username .alertpanel > div {
   height: 50%;
   width: 100%;
+  padding: 0 5px;
   line-height: 41px;
   border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 body .topbar .username .alertpanel > div:last-child {
   border-bottom: none;
@@ -131,29 +165,92 @@ body .topbar .username .alertpanel > div:last-child {
 body .topbar .username .alertpanel > div:hover {
   background-color: #f4f4f4;
 }
+body .topbar .username .alertpanel > div > i {
+  color: #333;
+  margin: 0 10px;
+}
 body .topbar .topright {
   float: right;
   height: 60px;
 }
 body .topbar .topright .changetheme {
   display: inline-block;
-  height: 30px;
-  width: 30px;
-  border-radius: 16px;
+  height: 28px;
+  width: 28px;
+  border-radius: 14px;
   text-align: center;
-  line-height: 30px;
-  background-color: #189cbb;
+  line-height: 28px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1cb6db;
+}
+body .topbar .topright .changetheme i {
+  cursor: pointer;
+}
+body .topbar .topright .changetheme .alertpanel {
+  width: 180px;
+  height: 78px;
+  padding: 0 10px;
+  top: 45px;
+}
+body .topbar .topright .changetheme .alertpanel > .title {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+  color: #555;
+  text-indent: 8px;
+  text-align: left;
+}
+body .topbar .topright .changetheme .alertpanel > .itembox {
+  width: 100%;
+  height: 40px;
+}
+body .topbar .topright .changetheme .alertpanel > .itembox > .item {
+  width: 22px;
+  height: 22px;
+  float: left;
+  margin: 0 8px;
+  border-radius: 12px;
+  background-color: #b4bdc9;
+  cursor: pointer;
+}
+body .topbar .topright .changetheme .alertpanel > .itembox > .item:nth-child(2) {
+  background-color: #e34a3e;
+}
+body .topbar .topright .changetheme .alertpanel > .itembox > .item:nth-child(3) {
+  background-color: #64c7db;
+}
+body .topbar .topright .changetheme .alertpanel > .itembox > .item:nth-child(4) {
+  background-color: #b4bdc9;
+}
+body .topbar .topright .changetheme .alertpanel > .itembox > .item:nth-child(4) > img {
+  height: 14px;
+  position: relative;
+  top: 4px;
+  display: block;
+  margin: 0 auto;
 }
 body .topbar .topright .username {
   position: relative;
   margin-left: 10px;
-  margin-right: 20px;
 }
-body .topbar .topright .username.hasmessage::before {
+body .topbar .topright .username > span .big {
+  padding-right: 40px;
+}
+body .topbar .topright .username > span .big > i {
+  position: absolute;
+  top: 7px;
+  right: 0px;
+}
+body .topbar .topright .username > span .small {
+  display: none;
+}
+body .topbar .topright .username > span.hasmessage .big::before {
   content: '';
   position: absolute;
-  top: 12px;
-  right: -14px;
+  top: 10px;
+  right: 25px;
   display: block;
   height: 8px;
   width: 8px;
@@ -169,6 +266,9 @@ body .alertpanel {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
+body .open .alertpanel {
+  display: block;
+}
 body .leftbar {
   position: absolute;
   left: 0;
@@ -176,42 +276,83 @@ body .leftbar {
   width: 214px;
   height: 100%;
   padding-top: 60px;
-  background-color: #281414;
+  overflow-y: scroll;
+  background-color: #2f1717;
   z-index: 5;
 }
 body .leftbar > .menu {
   width: 100%;
   height: auto;
   max-height: 100%;
+  padding-top: 8px;
+  margin-top: -8px;
   color: #e8e8e8;
 }
 body .leftbar > .menu > li {
+  position: relative;
   height: 44px;
   margin: 8px 0;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden !important;
   cursor: pointer;
 }
 body .leftbar > .menu > li > a {
+  position: relative;
   display: block;
   height: 44px;
   width: 100%;
   line-height: 44px;
-  padding-left: 20px;
+  padding-left: 60px;
+}
+body .leftbar > .menu > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body .leftbar > .menu > li > a > i {
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  font-size: 24px;
+}
+body .leftbar > .menu > li > a > div {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  right: 0px;
+  top: 0px;
+  font-size: 24px;
+}
+body .leftbar > .menu > li > a > div > i.fa-angle-down {
+  display: none;
 }
 body .leftbar > .menu > li > .submenu {
+  display: none;
   height: auto;
   width: 100%;
-  padding-left: 60px;
 }
 body .leftbar > .menu > li > .submenu > li {
   width: 100%;
+  padding-left: 60px;
   height: 35px;
   line-height: 35px;
   cursor: pointer;
 }
+body .leftbar > .menu > li > .submenu > li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body .leftbar > .menu > li.open > a > div > i.fa-angle-right {
+  display: none;
+}
+body .leftbar > .menu > li.open > a > div > i.fa-angle-down {
+  display: inline-block;
+}
+body .leftbar > .menu > li.open > .submenu {
+  display: block;
+}
 body .leftbar > .menu > li.set > a {
   background-color: #d02b1e;
+}
+body .leftbar > .menu > li.set > .submenu {
+  display: block;
 }
 body .content {
   width: 100%;
@@ -225,11 +366,61 @@ body .content {
 body.menuclose .topbar {
   padding-left: 97px;
 }
-body.menuclose .leftbar {
+body.menuclose .topbar > .logobox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
   width: 72px;
 }
-body.menuclose .leftbar > .menu > li * {
+body.menuclose .topbar > .logobox > .logo2 {
   display: none;
+}
+body.menuclose .leftbar {
+  width: 72px;
+  overflow-y: visible;
+}
+body.menuclose .leftbar > .menu > li {
+  height: 44px !important;
+  overflow: visible !important;
+  margin: 16px 0;
+}
+body.menuclose .leftbar > .menu > li > a {
+  padding-left: 72px;
+}
+body.menuclose .leftbar > .menu > li > a > i {
+  top: 5px;
+  font-size: 30px;
+}
+body.menuclose .leftbar > .menu > li > a > span {
+  display: none;
+}
+body.menuclose .leftbar > .menu > li > a > div {
+  display: none;
+}
+body.menuclose .leftbar > .menu > li > .submenu {
+  display: none;
+}
+body.menuclose .leftbar > .menu > li.set:hover > a > span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 150px;
+  height: 44px;
+  padding-left: 24px;
+  background-color: #d02b1e;
+}
+body.menuclose .leftbar > .menu > li.set:hover > .submenu {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 72px;
+  width: 150px;
+  background-color: #d02b1e;
+}
+body.menuclose .leftbar > .menu > li.set:hover > .submenu > li {
+  padding-left: 40px;
 }
 body.menuclose .content {
   padding-left: 77px;
@@ -254,6 +445,10 @@ body.menuclose .content {
   width: 100%;
   height: 100%;
 }
+.content .slideContainer .contitem {
+  padding-top: 10px;
+  height: 100%;
+}
 .content .contitem {
   height: 50%;
   float: left;
@@ -262,12 +457,6 @@ body.menuclose .content {
 .content .contitem#newsblock,
 .content .contitem#taskblock {
   padding-bottom: 10px;
-}
-.content .contitem#documentblock,
-.content .contitem#scheduleblock,
-.content .contitem#stockblock {
-  padding-top: 10px;
-  height: 100%;
 }
 .content .contitem .newsContainer,
 .content .contitem .taskContainer,
@@ -422,7 +611,7 @@ body.menuclose .content {
   height: 100%;
   text-align: center;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 5px;
   background-color: #fdbd15;
   position: relative;
@@ -602,11 +791,15 @@ body.menuclose .content {
 }
 .content .contitem .stockContainer .title a {
   display: block;
+  width: 35px;
+  height: 35px;
   position: absolute;
-  right: 10px;
-  top: -5px;
+  right: 5px;
+  top: 5px;
   color: #cf2c1b;
   font-size: 25px;
+  text-align: center;
+  line-height: 30px;
 }
 .content .contitem .stockContainer .title img {
   vertical-align: middle;
@@ -621,15 +814,23 @@ body.menuclose .content {
   width: 100%;
   height: 100%;
 }
-.content .contitem.nocont > * {
+.content .contitem > .noContainer {
   display: none;
-}
-.content .contitem.nocont > .noContainer {
-  display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: rgba(253, 189, 21, 0.7);
   cursor: pointer;
+}
+.content .contitem > .noContainer > i {
+  font-size: 56px;
+  color: #fff;
+}
+.content .contitem.nocont > div {
+  display: none;
+}
+.content .contitem.nocont > .noContainer {
+  display: block;
 }
 body.alertshow {
   overflow: hidden;
@@ -670,13 +871,14 @@ body.alertshow .masklayer {
 }
 .masklayer > .alertbox > .title span {
   position: absolute;
-  right: 15px;
-  top: 16px;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
+  right: 5px;
+  top: 5px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   text-align: center;
   cursor: pointer;
+  font-size: 24px;
 }
 .masklayer > .alertbox.cont {
   width: 100%;
@@ -698,17 +900,65 @@ body.alertshow .masklayer {
   padding: 8px 20px 0;
 }
 #widgetcenter > .cont > div > .contblock {
+  position: relative;
   width: 89px;
   height: 83px;
   margin: 0 auto;
   border-radius: 5px;
   background-color: #fbb113;
 }
+#widgetcenter > .cont > div > .contblock > i {
+  font-size: 40px;
+  color: #fff;
+}
+#widgetcenter > .cont > div > .contblock > span {
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+#widgetcenter > .cont > div > .contblock > span > .lockicon,
+#widgetcenter > .cont > div > .contblock > span > .checkbox {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: 4px;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox {
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox .fa-square-o {
+  display: inline-block;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox .fa-check-square-o {
+  position: relative;
+  left: 1px;
+  display: none;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox.checked .fa-square-o {
+  display: none;
+}
+#widgetcenter > .cont > div > .contblock > span > .checkbox.checked .fa-check-square-o {
+  display: inline-block;
+}
+#widgetcenter > .cont > div > .contblock > span.lock {
+  background: url('../img/widgetbg.png') no-repeat;
+}
+#widgetcenter > .cont > div > .contblock > span.lock > .lockicon {
+  display: block;
+}
+#widgetcenter > .cont > div > .contblock > span.lock > .checkbox {
+  display: none;
+}
 #widgetcenter > .cont > div > span {
   display: block;
   margin: 0 auto;
   width: 89px;
-  padding: 0 5px;
+  padding: 10px 5px 0;
   font-size: 15px;
 }
 #addnewlink {
@@ -720,10 +970,12 @@ body.alertshow .masklayer {
   height: 40px;
   line-height: 40px;
   background-color: #e94430;
+  color: #fff;
 }
 #addnewlink > .title span {
   position: absolute;
   top: 12px;
+  right: 10px;
   width: 16px;
   height: 16px;
   line-height: 12px;
@@ -769,4 +1021,33 @@ body.alertshow .masklayer {
 }
 #addnewlink > .btngroup .btn:first-child {
   margin-right: 10px;
+}
+/*拖拽必要的样式*/
+@media (min-width: 900px) {
+  .gridly {
+    position: relative;
+  }
+  .gridly .brick .title {
+    cursor: move;
+  }
+  .brick {
+    position: absolute;
+    z-index: 1;
+  }
+  .brick:nth-child(1) {
+    left: 0;
+  }
+  .brick:nth-child(2) {
+    left: 33.33%;
+  }
+  .brick:nth-child(3) {
+    left: 66.67%;
+  }
+  .draging {
+    z-index: 2;
+    opacity: 0.8;
+  }
+  .draging > div {
+    border: 1px dashed #000;
+  }
 }
