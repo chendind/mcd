@@ -4,6 +4,17 @@ body.themezgf {
 body.themezgf .leftbar {
   background-color: rgba(208, 43, 30, 0.9);
 }
+body.themezgf .topbar > .logobox {
+  background: none;
+}
+body.themezgf .topbar .topright .changetheme {
+  background-color: #000;
+}
+@media (max-width: 900px) {
+  body.themezgf .topbar .topright .changetheme {
+    background: none;
+  }
+}
 body.themezgf .content .contitem .taskContainer {
   background-image: url(../img/themezgf-fish1.jpg);
   background-repeat: no-repeat;
@@ -20,5 +31,5 @@ body.themezgf .content .contitem .taskContainer > div {
 body.themezgf .content .contitem .scheduleContainer {
   background-image: url(../img/themezgf-mai.png);
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: bottom left;
 }

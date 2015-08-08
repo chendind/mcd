@@ -154,7 +154,7 @@
   	 		}
   	 })
 // change theme color
-$(".changetheme>alertpanel>itembox>item").bind('click',function(){
+$(".changetheme>.alertpanel>.itembox>.item").bind('click',function(){
 	var theme = $(this).attr("data-theme");
 	body.removeClass('themenormal themezgf').addClass(theme);
 })

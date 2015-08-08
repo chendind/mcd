@@ -4,6 +4,18 @@ body.themezgf{
 	.leftbar {
 		background-color: fadeOut(@red,10%);
 	}
+	.topbar>.logobox{
+		background: none;
+	}
+	
+	.topbar .topright .changetheme {
+		background-color: #000;
+	}
+	@media(max-width:900px){
+		.topbar .topright .changetheme {
+			background: none;
+		}
+	}
 	.content{
 		.contitem .taskContainer{
 			background-image: url(../img/themezgf-fish1.jpg);
@@ -21,7 +33,7 @@ body.themezgf{
 		.contitem .scheduleContainer{
 			background-image: url(../img/themezgf-mai.png);
 			background-repeat: no-repeat;
-			background-position: top left;
+			background-position: bottom left;
 		}
 	} 
 }
