@@ -65,6 +65,7 @@ body .topbar > .logobox {
   position: absolute;
   left: 0;
   top: 0;
+  display: block;
   height: 60px;
   width: 214px;
   overflow: hidden;

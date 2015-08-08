@@ -114,9 +114,11 @@
 		var id = $(this).attr("data-alert");
 		mcdalert($("#"+id).clone(true));
 	})
-  	
-  	$(".slideBox")[0].addEventListener("touchstart", touchStart, false);
+  	if($(".slideBox").length){
+  		$(".slideBox")[0].addEventListener("touchstart", touchStart, false);
   	$(".slideBox")[0].addEventListener("touchend", touchEnd, false);
+  	}
+  	
   	function touchStart(){
   		var slideWidth=$(".slideBox").width();
   		if($(".slideContainer>div").is(":animated"))
