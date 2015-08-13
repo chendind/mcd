@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+/*@font-face {
+  font-family:segoe;
+  src:url('../font/wryh.woff');
+  font-weight: normal;
+}*/
 body,
 div,
 a,
@@ -23,7 +28,7 @@ input[type="text"],
 button {
   background-color: #fff;
   color: #555;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, sans-serif;
+  font-family: "Open Sans", "微软雅黑","Helvetica Neue", Helvetica, Arial, STHeiti, sans-serif;
   font-size: 14px;
   position: relative;
   margin: 0 auto;

@@ -28,6 +28,45 @@ body.themezgf .content .contitem .taskContainer > div {
   background-repeat: no-repeat;
   background-position: bottom right;
 }
+body.themezgf .content .contitem .taskContainer > div > div {
+  padding: 0px 5px;
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#GAP {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item1.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#AM {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item2.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#PMT {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item3.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#MGIS {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item2.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#IT {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item5.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#EMS {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item6.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item#BIT {
+  background-color: transparent;
+  background-image: url(../img/themezgf-item3.png);
+}
+body.themezgf .content .contitem .taskContainer > div > div > div.item.newMsg::before {
+  display: none;
+}
 body.themezgf .content .contitem .scheduleContainer {
   background-image: url(../img/themezgf-mai.png);
   background-repeat: no-repeat;

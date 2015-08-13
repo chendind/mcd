@@ -18,10 +18,13 @@
 @media(max-width:900px){
 	html{
 		height: auto;
+		min-height: 100%;
 	}
 	body{
 		overflow: hidden;
-		height: auto;
+		// height: auto;
+		width: 100%;
+		position: absolute;
 		.topbar{
 			width: 100%;
 			height:60px;
@@ -97,15 +100,23 @@
 		}
 		.leftbar{
 			width: 100% !important;
+			// height: 100%;
 			&>.menu{
 				height: 100%;
 			}
 		}
+		.content{
+    		display: none;
+    	}
 	}
     body.menuclose{
 		overflow: scroll;
+		position: static;
     	.leftbar{
 			display: none;
+    	}
+    	.content{
+    		display: block;
     	}
     }
     body,body.menuclose{

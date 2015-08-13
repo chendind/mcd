@@ -37,7 +37,8 @@
 		li.addClass('set').siblings('li').removeClass('set');
 	})
 
-	$("#menutoggle").on('click',function(){
+	$("#menutoggle").on('click',function(e){
+		e.stopPropagation();e.preventDefault();
 		body.toggleClass('menuclose');
 		positioncheck();
 	})

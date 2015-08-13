@@ -9,10 +9,12 @@
 @media (max-width: 900px) {
   html {
     height: auto;
+    min-height: 100%;
   }
   body {
     overflow: hidden;
-    height: auto;
+    width: 100%;
+    position: absolute;
   }
   body .topbar {
     width: 100%;
@@ -84,11 +86,18 @@
   body .leftbar > .menu {
     height: 100%;
   }
+  body .content {
+    display: none;
+  }
   body.menuclose {
     overflow: scroll;
+    position: static;
   }
   body.menuclose .leftbar {
     display: none;
+  }
+  body.menuclose .content {
+    display: block;
   }
   body .content,
   body.menuclose .content {
