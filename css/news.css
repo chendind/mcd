@@ -1,8 +1,22 @@
-.newsBox {
+html {
+  min-height: 100%;
+  height: auto;
+}
+body {
+  min-height: 100%;
+  height: auto;
+}
+body .content {
+  height: auto;
+  overflow: hidden;
+}
+body .content .newsBox {
   position: relative;
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
-.newsBox .boxBanner {
+body .content .newsBox .boxBanner {
   width: 100%;
   height: 30px;
   line-height: 30px;
@@ -11,37 +25,37 @@
   color: #fff;
   background-color: #d02b1e;
 }
-.newsBox .boxContent {
+body .content .newsBox .boxContent {
   position: relative;
-  overflow-y: scroll;
+  overflow: auto;
   width: 100%;
   padding: 20px 30px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.newsBox .boxContent .title {
+body .content .newsBox .boxContent .title {
   font-size: 18px;
   color: #000;
   margin-bottom: 5px;
 }
-.newsBox .boxContent .time {
+body .content .newsBox .boxContent .time {
   display: block;
   font-size: 12px;
   color: #aaa;
   margin-bottom: 5px;
 }
-.newsBox .boxContent > p {
+body .content .newsBox .boxContent > p {
   font-size: 13px;
   text-indent: 2em;
   color: #000;
   line-height: 20px;
 }
-.newsBox .boxContent > img {
+body .content .newsBox .boxContent > img {
   width: 200px;
   height: 190px;
   margin: 20px 10px 20px 0;
   font-weight: normal;
 }
-.newsBox .boxContent .nav {
+body .content .newsBox .boxContent .nav {
   width: 60%;
   height: 60px;
   margin-left: -15px;
@@ -50,21 +64,32 @@
   list-style: none;
   background-color: #fff;
 }
-.newsBox .boxContent .nav li {
+body .content .newsBox .boxContent .nav li {
   height: 30px;
   line-height: 30px;
   font-size: 13px;
   font-weight: bold;
+  position: relative;
 }
-.newsBox .boxContent .nav li:first-of-type {
+body .content .newsBox .boxContent .nav li:first-of-type {
   border-bottom: 1px #eee solid;
 }
-.newsBox .boxContent .nav li a {
+body .content .newsBox .boxContent .nav li a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 45px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-left: 5px;
   font-size: 12px;
   font-weight: normal;
 }
-.newsBox .boxContent .back {
+body .content .newsBox .boxContent .back {
   display: block;
   width: 67px;
   height: 22px;

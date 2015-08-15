@@ -1,0 +1,10 @@
+@media (max-width: 900px) {
+  .newsBox .boxContent .nav {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .newsBox .boxContent .nav {
+    width: 100%;
+  }
+}

@@ -186,6 +186,10 @@
   }
 }
 @media (max-width: 600px) {
+  body .topbar .myfavorite .alertpanel {
+    width: 100% !important;
+    overflow-x: auto;
+  }
   body .content {
     padding-left: 16px !important;
     padding-right: 16px !important;

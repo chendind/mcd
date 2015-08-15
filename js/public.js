@@ -59,17 +59,17 @@
 	var linknum = $("#myfavorite .alertpanel .linkitem").length-0, boxnum = Math.ceil((linknum+1)/6),
 	    box = $("<div class=\"linkbox\"></div>");
 	    // tail = $('<a class="addbtn">Add New Link</a><div class="clear"></div>');
-	$("#myfavorite .alertpanel").width(boxnum*160+30);
+	$("#myfavorite .alertpanel>div").width(boxnum*160+30);
 	for(i=0;i<boxnum;i++){
-		var thisbox = box.clone().appendTo($("#myfavorite .alertpanel"));
-		$.each($("#myfavorite .alertpanel>.linkitem"),function(index){
+		var thisbox = box.clone().appendTo($("#myfavorite .alertpanel>div"));
+		$.each($("#myfavorite .alertpanel>div>.linkitem"),function(index){
 			if(index<6){
 	    		$(this).appendTo(thisbox);
 			}
 		})
 		if(i+1==boxnum){
 			if(thisbox.children('.linkitem').length>4){
-				box.clone().appendTo($("#myfavorite .alertpanel"));
+				box.clone().appendTo($("#myfavorite .alertpanel>div"));
 			}
 			// tail.appendTo($('#myfavorite .alertpanel'));
 		}

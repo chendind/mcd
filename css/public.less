@@ -84,9 +84,9 @@ body{
 			}
 			&>.logo2{
 				position: absolute;
-				left:65px;top:22px;
+				left:65px;top:21px;
 				display: block;
-				height: 16px;
+				height: 18px;
 				width: 130px;
 			}
 		}
@@ -121,27 +121,32 @@ body{
 			.alertpanel{
 				height:270px;
 				bottom:-270px;
-				padding: 15px;
+				width: auto;
 				left:0;
-				.linkbox{
-					width:159px;
-					height:100%;
-					float: left;
-					.linkitem{
-						width:100%;
-						line-height: 20px;
-						height:40px;
-						padding:10px 20px 10px 10px;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						white-space: nowrap;
+				&>div{
+					height:270px;
+					padding: 15px;
+					position: relative;
+					.linkbox{
+						width:159px;
+						height:100%;
+						float: left;
+						.linkitem{
+							width:100%;
+							line-height: 20px;
+							height:40px;
+							padding:10px 20px 10px 10px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
 					}
-				}
-				.addbtn{
-					position:absolute;
-					right:20px;
-					bottom:15px;
-					color:#ee4f3c;
+					.addbtn{
+						position:absolute;
+						right:50px;
+						bottom:15px;
+						color:#ee4f3c;
+					}
 				}
 			}
 		}

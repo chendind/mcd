@@ -83,9 +83,9 @@ body .topbar > .logobox > .logo1 {
 body .topbar > .logobox > .logo2 {
   position: absolute;
   left: 65px;
-  top: 22px;
+  top: 21px;
   display: block;
-  height: 16px;
+  height: 18px;
   width: 130px;
 }
 body .topbar .menutoggle {
@@ -120,15 +120,20 @@ body .topbar .myfavorite .fa-heart-o {
 body .topbar .myfavorite .alertpanel {
   height: 270px;
   bottom: -270px;
-  padding: 15px;
+  width: auto;
   left: 0;
 }
-body .topbar .myfavorite .alertpanel .linkbox {
+body .topbar .myfavorite .alertpanel > div {
+  height: 270px;
+  padding: 15px;
+  position: relative;
+}
+body .topbar .myfavorite .alertpanel > div .linkbox {
   width: 159px;
   height: 100%;
   float: left;
 }
-body .topbar .myfavorite .alertpanel .linkbox .linkitem {
+body .topbar .myfavorite .alertpanel > div .linkbox .linkitem {
   width: 100%;
   line-height: 20px;
   height: 40px;
@@ -137,9 +142,9 @@ body .topbar .myfavorite .alertpanel .linkbox .linkitem {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-body .topbar .myfavorite .alertpanel .addbtn {
+body .topbar .myfavorite .alertpanel > div .addbtn {
   position: absolute;
-  right: 20px;
+  right: 50px;
   bottom: 15px;
   color: #ee4f3c;
 }
